@@ -16,6 +16,7 @@
     padding: var(--pad);
     height: var(--hei);
     width: var(--wid);
+    border: 3px #00000000 solid;
 }
 </style>
 
@@ -54,7 +55,7 @@ export default {
     computed: {
     componentStyles() {
       return {
-        '--pad': this.num +"px",
+        '--pad': (this.num - 3) +"px",
         '--wid': this.width,
         '--hei': this.height,
       }

@@ -23,16 +23,17 @@
         ookiesoft
       </span>
     </TransparentBox>
-    <div style="display: flex;flex-direction: column;justify-content: space-between;">
+    <div style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">
       <div style="display: flex;">
 
+        <ButtonHeader link="../../public/Vector top.svg"></ButtonHeader>
         <ButtonHeader link="../../public/telegram.svg"></ButtonHeader>
         <ButtonHeader link="../../public/whatssapp.svg"></ButtonHeader>
         <ButtonHeader link="../../public/phone.svg"></ButtonHeader>
       </div>
       <div>
-        <TransparentBox :num="13">
-          14353544545
+        <TransparentBox :num="16.5">
+          +79528576944
         </TransparentBox>
 
       </div>

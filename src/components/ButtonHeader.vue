@@ -6,14 +6,18 @@
         div{
 
             background: var(--t_link) center/cover;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
         }
+    }
+    .button_header:hover{
+        border: 3px #404040 solid;
+        background-color: #FFFFFFA4;
     }
 </style>
 
 <template>
-    <TransparentBox class="button_header" :num="10" :style="componentStyles">
+    <TransparentBox class="button_header" :num="7" :style="componentStyles">
         <div></div>
     </TransparentBox>
 </template>
@@ -28,6 +32,15 @@
     },
     components:{
         TransparentBox
+    },
+    mounted() {
+        console.log("mounted  /", Date.now())
+        // console.log(this.num)
+        // console.log(this.width)
+        // const div_box = document.querySelector(".transparent_box") as HTMLDivElement
+        // if(this.num) div_box.style.padding = this.num + "px"
+        // if(this.width != 0) div_box.style.width = this.width + "px"
+        // if(this.height != 0) div_box.style.height = this.height + "px"
     },
     computed: {
     componentStyles() {
