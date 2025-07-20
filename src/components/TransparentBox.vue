@@ -16,7 +16,7 @@
     padding: var(--pad);
     height: var(--hei);
     width: var(--wid);
-    border: 3px #00000000 solid;
+    border: 0px #ff1515 solid;
 }
 </style>
 
@@ -44,9 +44,9 @@ export default {
         },
     },
     mounted() {
-        console.log("mounted  /", Date.now())
+        // console.log("mounted  /", Date.now())
         // console.log(this.num)
-        console.log(this.width)
+        // console.log(this.width)
         // const div_box = document.querySelector(".transparent_box") as HTMLDivElement
         // if(this.num) div_box.style.padding = this.num + "px"
         // if(this.width != 0) div_box.style.width = this.width + "px"
@@ -55,7 +55,7 @@ export default {
     computed: {
     componentStyles() {
       return {
-        '--pad': (this.num - 3) +"px",
+        '--pad': (this.num) +"px",
         '--wid': this.width,
         '--hei': this.height,
       }

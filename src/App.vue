@@ -1,6 +1,6 @@
   <style scoped lang="scss">
   .svgCookie {
-      background: url("../../public/cookiesoft_v_2\ 2.svg") center/cover;
+      background: url("/cookiesoft_v_2\ 2.svg") center/cover;
       width: 85px;
       height: 85px;
       margin-right: 6px;
@@ -8,31 +8,55 @@
   
   .textCookie {
       font-family: "lexend";
-      font-size: 45px;
+      font-size: 42px;
+      margin: 0;
+      font-weight: 500;
   }
   header{
     background-color: var(--plshldColor);
   }
+  @media screen and (max-width: 800px) {
+  #information_block {
+    display: none;
+  }
+}
+  @media screen and (max-width: 650px) {
+  // .textCookie span {
+  //     display: none;
+  // }
+  // .svgCookie{
+  //   margin: 0;
+  // }
+  // .blockCookie{
+  //   width: 85px !important;
+  // }
+  header{
+    flex-direction: column;
+    top: -140px !important;
+  }
+  }
   </style>
 
 <template>
-    <header style="position: fixed; top: 0; z-index: 3; display: flex;">
-    <TransparentBox  width="300px">
+  <div id="div_top" style="height: 0px;"></div>
+  <header style="position: sticky; top: 0; z-index: 3; display: flex;">
+    <TransparentBox class="blockCookie"  width="300px">
       <div class="svgCookie"></div>
-      <span class="textCookie">
+      <h1 class="textCookie">
+        <span>
         ookiesoft
       </span>
+      </h1>
     </TransparentBox>
     <div style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">
       <div style="display: flex;">
-
-        <ButtonHeader link="../../public/Vector top.svg"></ButtonHeader>
-        <ButtonHeader link="../../public/telegram.svg"></ButtonHeader>
-        <ButtonHeader link="../../public/whatssapp.svg"></ButtonHeader>
-        <ButtonHeader link="../../public/phone.svg"></ButtonHeader>
+        <ButtonHeader id="but_id_1" n_id="but_id_1" tag="top" link_photo="/Vector top.svg"></ButtonHeader>
+        <ButtonHeader id="but_id_2" n_id="but_id_2" tag="telegram" link_photo="/telegram.svg"></ButtonHeader>
+        <ButtonHeader id="but_id_3" n_id="but_id_3" tag="whatsapp" link_photo="/whatssapp.svg"></ButtonHeader>
+        <ButtonHeader id="but_id_4" n_id="but_id_4" tag="phone" link_photo="/phone.svg"></ButtonHeader>
       </div>
       <div>
-        <TransparentBox :num="16.5">
+        <TransparentBox id="information_block" :num="17" style="font-weight: 600;">
           +79528576944
         </TransparentBox>
 
