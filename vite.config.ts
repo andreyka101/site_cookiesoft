@@ -21,7 +21,7 @@ export default defineConfig({
         // @ts-ignore
         main: resolve(__dirname, 'index.html'),
         // @ts-ignore
-        main: resolve(__dirname, 'portfolio/profi.html'),
+        profi: resolve(__dirname, 'portfolio/profi.html'),
       }
     }
   }
