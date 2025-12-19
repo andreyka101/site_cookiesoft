@@ -1,67 +1,42 @@
-<style scoped lang="scss">
-.block_site {
-    display: flex;
+<!DOCTYPE html>
+<html lang="en">
 
-    img {
-        border-radius: 15px;
-        height: 220px;
-        border: 3px #404040 solid;
-    }
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/cookiesoft_v_2 1.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookiesoft</title>
+    <link rel="stylesheet" href="style.scss">
+</head>
 
-    @media screen and (max-width: 1000px) {
-        img{
-            display: none;
-        }
-    }
-
-    .div_text {
-        // display: flex;
-        // width: 100%;
-        text-align: center;
-        flex-grow: 1;
-    }
-}
-
-a {
-    text-decoration: none;
-    color: #404040;
-}
-
-
-.foreground_for_photo {
-    background-color: rgba(65, 65, 65, 0.485);
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-content: center;
-    .but_arrow_left {
-        svg {
-            width: 55px;
-        }
-    }
-    .but_arrow_right {
-        svg {
-            rotate: 180deg;
-            width: 55px;
-        }
-    }
-}
-</style>
-
-<template>
-    <TransparentBox style="text-align: center; font-size: 28px; font-weight: 600;">
+<body>
+    <div id="div_top" style="height: 0px;"></div>
+    <header style="position: sticky; top: 0; z-index: 3; display: flex;">
+        <div class="transparent_box" class="blockCookie" style="width: 300px;">
+            <div class="svgCookie"></div>
+            <h1 class="textCookie">
+                <span>
+                    ookiesoft
+                </span>
+            </h1>
+        </div>
+        <div>
+            <div style="display: flex;">
+                <!-- <ButtonHeader id="but_id_5" n_id="but_id_5" link="https://profi.ru/profile/KvashninAS6"
+                    link_photo="/profile.svg">
+                </ButtonHeader> -->
+                <a href="https://profi.ru/profile/KvashninAS6" class="button_header">
+                    <div></div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="transparent_box" style="text-align: center; font-size: 28px; font-weight: 600;">
         Портфолио Квашнина Андрея для для сайта профи.ру
-    </TransparentBox>
+    </div>
     <!-- https://padron-rest.ru/ -->
     <a target="_blank" href="https://padron-rest.ru/">
-        <TransparentBox class="block_site">
+        <div class="transparent_box block_site">
             <img src="/public/Снимок экрана (3).png" alt="">
             <div class="div_text">
                 <h2>
@@ -79,11 +54,11 @@ a {
                     </ul>
                 </div>
             </div>
-        </TransparentBox>
+        </div>
     </a>
     <!-- https://goodschool.online/ -->
     <a target="_blank" href="https://goodschool.online/">
-        <TransparentBox class="block_site">
+        <div class="transparent_box block_site">
             <img src="/public/Снимок экрана (5).png" alt="">
             <div class="div_text">
                 <h2>
@@ -105,11 +80,11 @@ a {
                     </ul>
                 </div>
             </div>
-        </TransparentBox>
+        </div>
     </a>
     <!-- https://www.parfumerovv.ru/ -->
     <a target="_blank" href="https://www.parfumerovv.ru/">
-        <TransparentBox class="block_site">
+        <div class="transparent_box block_site">
             <img src="/public/Снимок экрана (2).png" alt="">
             <div class="div_text">
                 <h2>
@@ -132,7 +107,7 @@ a {
                     </ul>
                 </div>
             </div>
-        </TransparentBox>
+        </div>
     </a>
     <!-- <div class="foreground_for_photo">
         <button class="but_arrow_left">
@@ -157,8 +132,10 @@ a {
             </svg>
         </button>
     </div> -->
-</template>
 
-<script setup lang="ts">
-import TransparentBox from "../components/TransparentBox.vue";
-</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
+    <script type="module" src="../src/script.ts"></script>
+</body>
+
+</html>

@@ -70,7 +70,7 @@
       </div>
       <div>
         <div style="color: #292929;">
-          от 30.000 руб.
+          от 10.000 руб.
         </div>
         <!-- <div>
           заказать сайт
@@ -104,7 +104,7 @@
       </div>
       <div>
         <div style="color: #292929;">
-          от 60.000 руб.
+          от 40.000 руб.
         </div>
         <!-- <div>
           заказать мобильное приложение
@@ -149,7 +149,7 @@
       </div>
       <div>
         <div style="color: #292929;">
-          от 80.000 руб.
+          от 60.000 руб.
         </div>
         <!-- <div>
           заказать компьютерное приложение
@@ -184,7 +184,11 @@
       </div>
       <div>
         <div style="color: #292929;">
-          от 150.000 руб.
+          от 100
+          <!-- <RouterLink to="/portfolio" style="text-decoration: none; color: #404040;"> -->
+          .
+        <!-- </RouterLink> -->
+          000 руб.
         </div>
         <!-- <div>
           заказать Сервис
@@ -192,7 +196,6 @@
       </div>
     </TransparentBox>
     <TransparentBox class="div_img" width="212px">
-
       <div style="background: url('/svg_service_1.svg') center/cover; width: 300px; height: 150px;"></div>
     </TransparentBox>
   </a>

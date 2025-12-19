@@ -1,10 +1,11 @@
 <style scoped lang="scss">
 .transparent_box {
-  --pad: 1px;
-  --wid: 1px;
-  --hei: 1px;
-  }
-.transparent_box{
+    --pad: 1px;
+    --wid: 1px;
+    --hei: 1px;
+}
+
+.transparent_box {
     background-color: #ffffff52;
     // background-color: var(--plshldColor);
     backdrop-filter: blur(40px);
@@ -30,15 +31,15 @@
 // const { num } = defineProps(['num'])
 export default {
     props: {
-        num:{
+        num: {
             type: Number,
             default: 20,
         },
-        width:{
+        width: {
             type: String,
             default: "-",
         },
-        height:{
+        height: {
             type: String,
             default: "-",
         },
@@ -53,14 +54,14 @@ export default {
         // if(this.height != 0) div_box.style.height = this.height + "px"
     },
     computed: {
-    componentStyles() {
-      return {
-        '--pad': (this.num) +"px",
-        '--wid': this.width,
-        '--hei': this.height,
-      }
+        componentStyles() {
+            return {
+                '--pad': (this.num) + "px",
+                '--wid': this.width,
+                '--hei': this.height,
+            }
+        }
     }
-  }
 }
 // const { num } = defineProps(['num'])
 </script>

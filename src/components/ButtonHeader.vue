@@ -62,6 +62,10 @@ export default {
             type: String,
             default: "-",
         },
+        link: {
+            type: String,
+            default: "-",
+        },
         func: {
             type: Function
         },
@@ -156,6 +160,9 @@ export default {
 
             }
 
+        }
+        else {
+            el.href = this.link + ""
         }
 
 

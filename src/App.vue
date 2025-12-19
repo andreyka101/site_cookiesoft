@@ -52,7 +52,8 @@
         </span>
       </h1>
     </TransparentBox>
-    <div v-if="route.path != '/portfolio'" style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">
+    <div v-if="route.path != '/portfolio'"
+      style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">
       <div class="portfolio_none" style="display: flex;">
         <ButtonHeader id="but_id_1" n_id="but_id_1" tag="top" link_photo="/Vector top.svg">
         </ButtonHeader>
@@ -67,7 +68,13 @@
         <TransparentBox id="information_block" :num="17" style="font-weight: 600;">
           +79528576944
         </TransparentBox>
-
+      </div>
+    </div>
+    <div v-else>
+      <div style="display: flex;">
+        <ButtonHeader id="but_id_5" n_id="but_id_5" link="https://profi.ru/profile/KvashninAS6"
+          link_photo="/profile.svg">
+        </ButtonHeader>
       </div>
     </div>
   </header>
@@ -76,7 +83,7 @@
 
 
 <script setup lang="ts">
-import { RouterLink, RouterView,useRoute } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import TransparentBox from "./components/TransparentBox.vue";
 import ButtonHeader from "./components/ButtonHeader.vue";
 import router from './router';
@@ -84,5 +91,5 @@ const route = useRoute();
 
 
 // if(window.location.href == "https://cookiesoft.ru/portfolio")
-  // if (window.location.href == "http://localhost:5173/portfolio")
+// if (window.location.href == "http://localhost:5173/portfolio")
 </script>
