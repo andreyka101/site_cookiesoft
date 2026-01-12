@@ -9,7 +9,7 @@
     }
 
     @media screen and (max-width: 1000px) {
-        img{
+        img {
             display: none;
         }
     }
@@ -41,11 +41,13 @@ a {
     grid-template-rows: auto;
     align-items: center;
     justify-content: center;
+
     .but_arrow_left {
         svg {
             width: 55px;
         }
     }
+
     .but_arrow_right {
         svg {
             rotate: 180deg;
@@ -57,7 +59,7 @@ a {
 
 <template>
     <TransparentBox style="text-align: center; font-size: 28px; font-weight: 600;">
-        Портфолио Квашнина Андрея для для сайта профи.ру
+        Портфолио Квашнина Андрея для сайта профи.ру
     </TransparentBox>
     <!-- https://padron-rest.ru/ -->
     <a target="_blank" href="https://padron-rest.ru/">

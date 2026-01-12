@@ -1,29 +1,35 @@
-  .svgCookie {
+.svgCookie {
     background: url("/cookiesoft_v_2\ 2.svg") center/cover;
     width: 85px;
     height: 85px;
     margin-right: 6px;
-  }
+}
 
-  .textCookie {
+.textCookie {
     font-family: "lexend";
     font-size: 42px;
     margin: 0;
     font-weight: 500;
-  }
-
-  header {
-    // background-color: var(--plshldColor);
-  }
-
-  @media screen and (max-width: 800px) {
-    #information_block {
-      display: none;
+}
+@media screen and (max-width: 400px) {
+    body {
+        .transparent_box {
+            font-size: 20px;
+        }
     }
-  }
+}
 
-  @media screen and (max-width: 650px) {
+header {
+    // background-color: var(--plshldColor);
+}
 
+@media screen and (max-width: 800px) {
+    #information_block {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
     // .textCookie span {
     //     display: none;
     // }
@@ -34,10 +40,10 @@
     //   width: 85px !important;
     // }
     header {
-      flex-direction: column;
-      top: -140px !important;
+        flex-direction: column;
+        top: -140px !important;
     }
-  }
+}
 .transparent_box {
     background-color: #ffffff52;
     // background-color: var(--plshldColor);
@@ -65,11 +71,10 @@
     padding: 4px;
 
     div {
-        background: url('profile.svg') center/cover;
+        background: url("profile.svg") center/cover;
         width: 30px;
         height: 30px;
     }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -77,18 +82,11 @@
         width: 40px;
         height: 40px;
     }
-
 }
 
-@media(hover:hover) {
-
-    .button_header:hover {
-        transition: 0.1s;
-        border: 3px #404040 solid;
-    }
-}
 .block_site {
     display: flex;
+    transition: 0.5s;
 
     img {
         border-radius: 15px;
@@ -97,8 +95,16 @@
     }
 
     @media screen and (max-width: 1000px) {
-        img{
-            display: none;
+        img {
+            height: 150px;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: 400px) {
+        img {
+            width: 100%;
         }
     }
 
@@ -109,12 +115,22 @@
         flex-grow: 1;
     }
 }
+@media (hover: hover) {
+    .button_header:hover {
+        transition: 0.1s;
+        border: 3px #404040 solid;
+    }
+    .block_site:hover {
+        transition: 0.5s;
+        background-color: #40404052;
+        color: #2b2b2b;
+    }
+}
 
 a {
     text-decoration: none;
     color: #404040;
 }
-
 
 .foreground_for_photo {
     background-color: rgba(65, 65, 65, 0.485);
