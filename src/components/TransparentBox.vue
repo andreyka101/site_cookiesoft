@@ -4,6 +4,7 @@
     --wid: 1px;
     --hei: 1px;
 }
+// #bddbff
 
 .transparent_box {
     background-color: #ffffff52;

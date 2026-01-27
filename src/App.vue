@@ -46,11 +46,12 @@
   <header style="position: sticky; top: 0; z-index: 3; display: flex;">
     <TransparentBox class="blockCookie" width="300px">
       <div class="svgCookie"></div>
-      <h1 class="textCookie">
+      <!-- k - 47 -->
+      <div class="textCookie">
         <span>
           ookiesoft
         </span>
-      </h1>
+      </div>
     </TransparentBox>
     <div v-if="route.path != '/portfolio'"
       style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">

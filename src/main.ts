@@ -3,6 +3,7 @@ import './GLASSlOLLIPOPS/interfaces_GLASSlOLLIPOPS.scss'
 import LiveBackgroundMod from './GLASSlOLLIPOPS/live_background.ts'
 
 
+
 let liveBackground = new LiveBackgroundMod()
 liveBackground.Color.deleteALL()
 liveBackground.Color.append(["404040"])
@@ -20,3 +21,5 @@ const app = createApp(App)
 app.use(router)
 
 app.mount('#app')
+
+
