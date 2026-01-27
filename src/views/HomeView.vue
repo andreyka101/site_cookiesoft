@@ -163,14 +163,14 @@ h3 {
           частных мастеров, локальных кафе и магазинов, специалистов-фрилансеров, начинающих консультантов,
           технологических стартапов на ранней стадии.
         </p>
+        <RouterLink class="link" to="/small-business">
+          <SmallBusinessButton>
+            Подробнее про разработку малого бизнеса
+          </SmallBusinessButton>
+        </RouterLink>
       </div>
     </TransparentBox>
 
-    <RouterLink class="link" to="/small-business">
-      <SmallBusinessButton>
-        Подробнее про разработку малого бизнеса
-      </SmallBusinessButton>
-    </RouterLink>
   </ColorBox>
 
 

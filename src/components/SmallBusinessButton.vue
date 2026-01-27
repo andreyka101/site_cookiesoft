@@ -1,12 +1,36 @@
 <style scoped lang="scss">
-.svg_div {
-    display: inline-block;
-    border: 5px #404040 solid;
-    border-radius: 20px;
-    svg{
-        width: 150px;
-        height: 100px;
+.flex_w {
+    .svg_div {
+        display: inline-block;
+        border: 5px #323232 solid;
+        border-radius: 20px;
+        background-color: #fff;
+        transition: 0.5s;
+        
+        svg {
+            width: 150px;
+            height: 100px;
+        }
     }
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 800px;
+    padding: 20px;
+    padding-right: 70px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.flex_w:hover {
+    color: #b2ffe6;
+    transition: 3s;
+    .svg_div {
+        background-color: #b2ffe6;
+        transition: 3s;
+}
 }
 </style>
 
@@ -34,7 +58,7 @@
     </div> -->
 
 
-    <TransparentBox @mouseover="hover_mouse = true" @mouseleave="hover_mouse = false">
+    <div class="flex_w GLASSlOLLIPOPS_span" @mouseover="hover_mouse = true" @mouseleave="hover_mouse = false">
         <div class="svg_div">
             <svg viewBox="0 0 375 250" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <polygon class="box1" points="78,207 187,43 187,207" fill="#404040" />
@@ -44,7 +68,7 @@
         <div class="center_text">
             <slot></slot>
         </div>
-    </TransparentBox>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -74,16 +98,16 @@ watch(hover_mouse, (newValue) => {
     else {
         // if (anime1) anime1.reverse()
         // if (anime2) anime2.reverse()
-            anime({
-                targets: '.box1',
-                points: "78,207 187,43 187,207",
-                easing: 'linear',
-                duration: 500
-            });
+        anime1 = anime({
+            targets: '.box1',
+            points: "78,207 187,43 187,207",
+            // easing: 'linear',
+            duration: 500
+        });
         anime({
             targets: '.box2',
             points: "296,207 187,43 187,207",
-            easing: 'linear',
+            // easing: 'linear',
             duration: 500
         });
     }
