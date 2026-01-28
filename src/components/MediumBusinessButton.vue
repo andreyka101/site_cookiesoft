@@ -29,12 +29,12 @@
 }
 
 .flex_w:hover {
-    color: #b2ffe6;
+    color: #b2edff;
     transition: 1s;
     background-color: #404040;
 
     .svg_div {
-        background-color: #b2ffe6;
+        background-color: #b2edff;
         transition: 1s;
     }
 }
@@ -68,12 +68,15 @@
         </svg>
     </div> -->
     <div style="display: flex;">
-        <RouterLink class="link" to="/small-business">
+
+        <RouterLink class="link" to="/medium-business">
+            
             <div class="flex_w" @mouseover="hover_mouse_small = true" @mouseleave="hover_mouse_small = false">
                 <div class="svg_div">
                     <svg viewBox="0 0 375 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <polygon class="box1_1" points="78,207 187,43 187,207" fill="#404040" />
-                        <polygon class="box1_2" points="296,207 187,43 187,207" fill="#404040" />
+                        <rect class="box2_1" x="87" y="25" width="200" height="200" fill="#404040" />
+                        <rect class="box2_2" x="-85" y="425" width="200" height="200" fill="#404040" />
+                        <rect class="box2_3" x="289" y="425" width="200" height="200" fill="#404040" />
                     </svg>
                 </div>
                 <div class="center_text">
@@ -104,15 +107,32 @@ watch(hover_mouse_small, (newValue) => {
         }
         animation = [
             anime({
-                targets: '.box1_1',
-                points: "53,235.5 53,60 162,235.5",
+                targets: '.box2_1',
+                x: "137",
+                y: "21",
+                width: "100",
+                height: "100",
+                // easing: 'linear',
                 duration: 3000
             }),
             anime({
-                targets: '.box1_2',
-                points: "322,236 322,60.5 213,236",
+                targets: '.box2_2',
+                x: "85",
+                y: "125",
+                width: "100",
+                height: "100",
+                // easing: 'linear',
                 duration: 3000
-            })
+            }),
+            anime({
+                targets: '.box2_3',
+                x: "189",
+                y: "125",
+                width: "100",
+                height: "100",
+                // easing: 'linear',
+                duration: 3000
+            }),
         ];
     }
     else {
@@ -121,17 +141,32 @@ watch(hover_mouse_small, (newValue) => {
         }
         animation = [
             anime({
-                targets: '.box1_1',
-                points: "78,207 187,43 187,207",
+                targets: '.box2_1',
+                x: "87",
+                y: "25",
+                width: "200",
+                height: "200",
                 // easing: 'linear',
                 duration: 1000
             }),
             anime({
-                targets: '.box1_2',
-                points: "296,207 187,43 187,207",
+                targets: '.box2_2',
+                x: "-85",
+                y: "425",
+                width: "200",
+                height: "200",
                 // easing: 'linear',
                 duration: 1000
-            })
+            }),
+            anime({
+                targets: '.box2_3',
+                x: "289",
+                y: "425",
+                width: "200",
+                height: "200",
+                // easing: 'linear',
+                duration: 1000
+            }),
         ]
     }
 })

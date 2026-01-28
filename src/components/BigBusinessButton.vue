@@ -29,19 +29,20 @@
 }
 
 .flex_w:hover {
-    color: #b2ffe6;
+    color: #b2c0ff;
     transition: 1s;
     background-color: #404040;
 
     .svg_div {
-        background-color: #b2ffe6;
+        background-color: #b2c0ff;
         transition: 1s;
     }
 }
+
 .link {
-  text-decoration: none;
-  display: inline-block;
-  margin: auto;
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
 }
 </style>
 
@@ -67,13 +68,23 @@
             </g>
         </svg>
     </div> -->
+
     <div style="display: flex;">
-        <RouterLink class="link" to="/small-business">
+
+        <RouterLink class="link" to="/big-business">
+
             <div class="flex_w" @mouseover="hover_mouse_small = true" @mouseleave="hover_mouse_small = false">
                 <div class="svg_div">
                     <svg viewBox="0 0 375 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <polygon class="box1_1" points="78,207 187,43 187,207" fill="#404040" />
-                        <polygon class="box1_2" points="296,207 187,43 187,207" fill="#404040" />
+                        <!-- Левая половина (аппроксимация) -->
+                        <path class="box3_1"
+                            d="M187 226C173.736 226 160.603 223.388 148.349 218.312C136.095 213.236 124.961 205.797 115.582 196.418C106.203 187.039 98.7639 175.905 93.6882 163.651C88.6124 151.397 86 138.264 86 125C86 111.736 88.6124 98.6029 93.6882 86.349C98.7639 74.0951 106.204 62.9609 115.582 53.5822C124.961 44.2035 136.095 36.7639 148.349 31.6882C160.603 26.6124 173.736 24 187 24L187 125V226Z"
+                            fill="#404040" />
+                        <path class="box3_2"
+                            d="M187 226C213.787 226 239.477 215.359 258.418 196.418C277.359 177.477 288 151.787 288 125C288 98.2131 277.359 72.5234 258.418 53.5822C239.477 34.641 213.787 24 187 24L187 125V226Z"
+                            fill="#404040" />
+                        <circle class="box3_3" cx="142" cy="-269" r="45" fill="#404040" />
+                        <circle class="box3_4" cx="232" cy="381" r="45" fill="#404040" />
                     </svg>
                 </div>
                 <div class="center_text">
@@ -104,15 +115,27 @@ watch(hover_mouse_small, (newValue) => {
         }
         animation = [
             anime({
-                targets: '.box1_1',
-                points: "53,235.5 53,60 162,235.5",
+                targets: '.box3_1',
+                d: "M-15 24C-1.73649 24 11.3971 26.6124 23.651 31.6882C35.9049 36.7639 47.0391 44.2035 56.4178 53.5822C65.7965 62.9609 73.2361 74.0951 78.3118 86.349C83.3876 98.6029 86 111.736 86 125C86 138.264 83.3876 151.397 78.3118 163.651C73.2361 175.905 65.7965 187.039 56.4178 196.418C47.0391 205.797 35.9049 213.236 23.651 218.312C11.3971 223.388 -1.7365 226 -15 226L-15 125V24Z5",
+                duration: 1500
+            }),
+            anime({
+                targets: '.box3_2',
+                d: "M389 24C362.213 24 336.523 34.641 317.582 53.5822C298.641 72.5234 288 98.2131 288 125C288 151.787 298.641 177.477 317.582 196.418C336.523 215.359 362.213 226 389 226L389 125V24Z",
+                duration: 1500
+            }),
+            anime({
+                targets: '.box3_3',
+                cx: "142",
+                cy: "69",
                 duration: 3000
             }),
             anime({
-                targets: '.box1_2',
-                points: "322,236 322,60.5 213,236",
+                targets: '.box3_4',
+                cx: "232",
+                cy: "181",
                 duration: 3000
-            })
+            }),
         ];
     }
     else {
@@ -121,17 +144,27 @@ watch(hover_mouse_small, (newValue) => {
         }
         animation = [
             anime({
-                targets: '.box1_1',
-                points: "78,207 187,43 187,207",
-                // easing: 'linear',
+                targets: '.box3_1',
+                d: "M187 226C173.736 226 160.603 223.388 148.349 218.312C136.095 213.236 124.961 205.797 115.582 196.418C106.203 187.039 98.7639 175.905 93.6882 163.651C88.6124 151.397 86 138.264 86 125C86 111.736 88.6124 98.6029 93.6882 86.349C98.7639 74.0951 106.204 62.9609 115.582 53.5822C124.961 44.2035 136.095 36.7639 148.349 31.6882C160.603 26.6124 173.736 24 187 24L187 125V226Z",
                 duration: 1000
             }),
             anime({
-                targets: '.box1_2',
-                points: "296,207 187,43 187,207",
-                // easing: 'linear',
+                targets: '.box3_2',
+                d: "M187 226C213.787 226 239.477 215.359 258.418 196.418C277.359 177.477 288 151.787 288 125C288 98.2131 277.359 72.5234 258.418 53.5822C239.477 34.641 213.787 24 187 24L187 125V226Z",
                 duration: 1000
-            })
+            }),
+            anime({
+                targets: '.box3_3',
+                cx: "142",
+                cy: "-269",
+                duration: 1000
+            }),
+            anime({
+                targets: '.box3_4',
+                cx: "232",
+                cy: "381",
+                duration: 1000
+            }),
         ]
     }
 })
