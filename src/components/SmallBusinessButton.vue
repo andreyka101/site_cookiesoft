@@ -6,17 +6,21 @@
         border-radius: 20px;
         background-color: #fff;
         transition: 0.5s;
-        
+
         svg {
             width: 150px;
             height: 100px;
         }
     }
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
+    background-color: #404040bc;
+    border-radius: 20px;
+    margin: 2px;
+    color: #ffffff;
     width: 800px;
     padding: 20px;
     padding-right: 70px;
@@ -26,11 +30,13 @@
 
 .flex_w:hover {
     color: #b2ffe6;
-    transition: 3s;
+    transition: 1s;
+    background-color: #404040;
+
     .svg_div {
         background-color: #b2ffe6;
-        transition: 3s;
-}
+        transition: 1s;
+    }
 }
 </style>
 
@@ -58,7 +64,7 @@
     </div> -->
 
 
-    <div class="flex_w GLASSlOLLIPOPS_span" @mouseover="hover_mouse = true" @mouseleave="hover_mouse = false">
+    <div class="flex_w" @mouseover="hover_mouse_small = true" @mouseleave="hover_mouse_small = false">
         <div class="svg_div">
             <svg viewBox="0 0 375 250" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <polygon class="box1" points="78,207 187,43 187,207" fill="#404040" />
@@ -69,51 +75,109 @@
             <slot></slot>
         </div>
     </div>
+
+
+    <!-- <svg @mouseover="hover_mouse = true" @mouseleave="hover_mouse = false" viewBox="0 0 375 250" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="box1" points="78,207 187,43 187,207" fill="#404040" />
+        <polygon class="box2" points="296,207 187,43 187,207" fill="#404040" />
+    </svg> -->
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import TransparentBox from "../components/TransparentBox.vue";
-// @ts-ignore
 import anime from 'animejs';
-
-const hover_mouse = ref(false)
-let anime1 = null as any
-let anime2 = ref(null) as any
-watch(hover_mouse, (newValue) => {
+const hover_mouse_small = ref(false)
+let animation: any = null;
+watch(hover_mouse_small, (newValue) => {
     // console.log('Статус наведения:', newValue)
     if (newValue) {
-        anime1 = anime({
-            targets: '.box1',
-            points: "53,235.5 53,60 162,235.5",
-            duration: 3000
-        });
-        anime2 = anime({
-            targets: '.box2',
-            points: "322,236 322,60.5 213,236",
-            duration: 3000
-        });
-
+        if (animation) {
+            animation.forEach((anim: any) => anim.pause());
+        }
+        animation = [
+            anime({
+                targets: '.box1',
+                points: "53,235.5 53,60 162,235.5",
+                duration: 3000
+            }),
+            anime({
+                targets: '.box2',
+                points: "322,236 322,60.5 213,236",
+                duration: 3000
+            })
+        ];
     }
     else {
-        // if (anime1) anime1.reverse()
-        // if (anime2) anime2.reverse()
-        anime1 = anime({
-            targets: '.box1',
-            points: "78,207 187,43 187,207",
-            // easing: 'linear',
-            duration: 500
-        });
-        anime({
-            targets: '.box2',
-            points: "296,207 187,43 187,207",
-            // easing: 'linear',
-            duration: 500
-        });
+        if (animation) {
+            animation.forEach((anim: any) => anim.pause());
+        }
+        animation = [
+            anime({
+                targets: '.box1',
+                points: "78,207 187,43 187,207",
+                // easing: 'linear',
+                duration: 500
+            }),
+            anime({
+                targets: '.box2',
+                points: "296,207 187,43 187,207",
+                // easing: 'linear',
+                duration: 500
+            })
+        ]
     }
 })
 
 
+
+
+
+
+// *******************************
+
+// import { ref, watch } from 'vue'
+// import TransparentBox from "../components/TransparentBox.vue";
+// // @ts-ignore
+// import anime from 'animejs';
+
+// const hover_mouse = ref(false)
+// let anime1 = null as any
+// let anime2 = ref(null) as any
+// watch(hover_mouse, (newValue) => {
+//     // console.log('Статус наведения:', newValue)
+//     if (newValue) {
+//         anime1 = anime({
+//             targets: '.box1',
+//             points: "53,235.5 53,60 162,235.5",
+//             duration: 3000
+//         });
+//         anime2 = anime({
+//             targets: '.box2',
+//             points: "322,236 322,60.5 213,236",
+//             duration: 3000
+//         });
+
+//     }
+//     else {
+//         // if (anime1) anime1.reverse()
+//         // if (anime2) anime2.reverse()
+//         anime1 = anime({
+//             targets: '.box1',
+//             points: "78,207 187,43 187,207",
+//             // easing: 'linear',
+//             duration: 500
+//         });
+//         anime({
+//             targets: '.box2',
+//             points: "296,207 187,43 187,207",
+//             // easing: 'linear',
+//             duration: 500
+//         });
+//     }
+// })
+
+// *******************************
 
 
 
