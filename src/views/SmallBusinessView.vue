@@ -1,6 +1,7 @@
 <style lang="scss">
 .small_business_page {
-    background-color: #b2ffe6;
+    // background-color: #b2ffe6;
+    background-color: #ceffff;
 }
 </style>
 

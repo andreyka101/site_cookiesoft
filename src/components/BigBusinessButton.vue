@@ -10,6 +10,7 @@
         svg {
             width: 150px;
             height: 100px;
+            display: block;
         }
     }
 
@@ -29,12 +30,12 @@
 }
 
 .flex_w:hover {
-    color: #b2c0ff;
+    color: #cfceff;
     transition: 1s;
     background-color: #404040;
 
     .svg_div {
-        background-color: #b2c0ff;
+        background-color: #cfceff;
         transition: 1s;
     }
 }

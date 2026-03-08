@@ -389,9 +389,9 @@ h3 {
           В моем портфолио вы увидите разбор реальных кейсов: какую задачу решал заказчик, какое технологическое решение
           я предложил и какой измеримый бизнес-результат был достигнут.
         </p>
-        <SmallBusinessButton>
+        <PortfolioButton>
           Подробнее про разработку малого бизнеса
-        </SmallBusinessButton>
+        </PortfolioButton>
       </div>
     </TransparentBox>
   </ColorBox>
@@ -451,4 +451,5 @@ import ColorBox from "../components/ColorBox.vue";
 import SmallBusinessButton from "../components/SmallBusinessButton.vue";
 import MediumBusinessButton from "../components/MediumBusinessButton.vue";
 import BigBusinessButton from "../components/BigBusinessButton.vue";
+import PortfolioButton from "../components/PortfolioButton.vue";
 </script>
