@@ -1,7 +1,10 @@
 <style lang="scss">
 .medium_business_page {
     // background-color: #b2edff;
-    background-color: #cee5ff;
+    // background-color: #cee5ff;
+    // background-color: #CEFFFF7F;
+    
+    // background-color: #CEF6FF7F;
 }
 </style>
 

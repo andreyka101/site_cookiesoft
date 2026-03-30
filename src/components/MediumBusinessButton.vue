@@ -1,48 +1,57 @@
 <style scoped lang="scss">
 .flex_w {
     .svg_div {
-        display: inline-block;
+        display: inline-flex;
         border: 5px #323232 solid;
         border-radius: 20px;
         background-color: #fff;
         transition: 0.5s;
 
         svg {
-            width: 150px;
-            height: 100px;
-            display: block;
+            // width: 150px;
+            // height: 100px;
+            // display: block;
         }
     }
 
-    display: flex;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 170px auto;
     align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-    background-color: #404040bc;
+    background-color: #ffffffbc;
     border-radius: 20px;
     margin: 2px;
-    color: #ffffff;
+    color: #404040;
     width: 800px;
-    padding: 20px;
-    padding-right: 70px;
+    padding: 5px;
+    // padding-right: 70px;
     margin: auto;
     transition: 0.5s;
-}
+    text-align: center;
 
-.flex_w:hover {
-    color: #cee5ff;
-    transition: 1s;
-    background-color: #404040;
-
-    .svg_div {
-        background-color: #cee5ff;
-        transition: 1s;
+    &:hover {
+        background-color: #ffffff;
     }
 }
+
+// .flex_w:hover {
+//     color: #cee5ff;
+//     transition: 1s;
+//     background-color: #404040;
+
+//     .svg_div {
+//         background-color: #cee5ff;
+//         transition: 1s;
+//     }
+// }
+
 .link {
-  text-decoration: none;
-  display: inline-block;
-  margin: auto;
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
 }
 </style>
 
@@ -71,8 +80,9 @@
     <div style="display: flex;">
 
         <RouterLink class="link" to="/medium-business">
-            
-            <div class="flex_w" @mouseover="hover_mouse_small = true" @mouseleave="hover_mouse_small = false">
+
+            <div class="flex_w medium_business_button" @mouseover="hover_mouse_small = true"
+                @mouseleave="hover_mouse_small = false">
                 <div class="svg_div">
                     <svg viewBox="0 0 375 250" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect class="box2_1" x="87" y="25" width="200" height="200" fill="#404040" />

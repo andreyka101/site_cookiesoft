@@ -101,7 +101,7 @@ export default {
                 })
             }
             if (this.tag == "top") {
-                el.href = "#div_top"
+                el.href = "javascript:void(0)"
                 el.addEventListener("mouseover", () => {
                     const information_block = document.querySelector("#information_block") as HTMLDivElement
                     information_block.innerHTML = `На верх`

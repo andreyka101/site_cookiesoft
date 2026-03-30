@@ -1,44 +1,51 @@
 <style scoped lang="scss">
 .flex_w {
     .svg_div {
-        display: inline-block;
+        display: inline-flex;
         border: 5px #323232 solid;
         border-radius: 20px;
         background-color: #fff;
         transition: 0.5s;
 
         svg {
-            width: 150px;
-            height: 100px;
-            display: block;
+            // width: 150px;
+            // height: 100px;
+            // display: block;
         }
     }
 
-    display: flex;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 170px auto;
     align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-    background-color: #404040bc;
+    background-color: #ffffffbc;
     border-radius: 20px;
     margin: 2px;
-    color: #ffffff;
+    color: #404040;
     width: 800px;
-    padding: 20px;
-    padding-right: 70px;
+    padding: 5px;
     margin: auto;
     transition: 0.5s;
-}
+    text-align: center;
 
-.flex_w:hover {
-    color: #cfceff;
-    transition: 1s;
-    background-color: #404040;
-
-    .svg_div {
-        background-color: #cfceff;
-        transition: 1s;
+    &:hover {
+        background-color: #ffffff;
     }
 }
+
+// .flex_w:hover {
+//     color: #cfceff;
+//     transition: 1s;
+//     background-color: #404040;
+
+//     .svg_div {
+//         background-color: #cfceff;
+//         transition: 1s;
+//     }
+// }
 
 .link {
     text-decoration: none;
@@ -72,9 +79,10 @@
 
     <div style="display: flex;">
 
-        <RouterLink class="link" to="/big-business">
+        <RouterLink class="link" to="/portfolio">
 
-            <div class="flex_w" @mouseover="hover_mouse_small = true" @mouseleave="hover_mouse_small = false">
+            <div class="flex_w portfolio_button" @mouseover="hover_mouse_small = true"
+                @mouseleave="hover_mouse_small = false">
                 <div class="svg_div">
                     <svg viewBox="0 0 375 250" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect class="box4_1" x="92" y="30" width="80" height="80" fill="#404040" />
@@ -112,33 +120,33 @@ watch(hover_mouse_small, (newValue) => {
         animation = [
             anime({
                 targets: '.box4_1',
-                x: '195',
+                x: '30',
                 y: '18',
-                width: '160',
+                width: '150',
                 height: '100',
                 duration: 3000
             }),
             anime({
                 targets: '.box4_2',
-                x: '20',
-                y: '133',
-                width: '160',
+                x: '195',
+                y: '18',
+                width: '150',
                 height: '100',
                 duration: 3000
             }),
             anime({
                 targets: '.box4_3',
-                x: '195',
-                y: '18',
-                width: '160',
+                x: '30',
+                y: '133',
+                width: '150',
                 height: '100',
                 duration: 3000
             }),
             anime({
                 targets: '.box4_4',
                 x: '195',
-                y: '18',
-                width: '160',
+                y: '133',
+                width: '150',
                 height: '100',
                 duration: 3000
             }),
@@ -150,28 +158,38 @@ watch(hover_mouse_small, (newValue) => {
         }
         animation = [
             anime({
-                targets: '.box3_1',
-                d: "M187 226C173.736 226 160.603 223.388 148.349 218.312C136.095 213.236 124.961 205.797 115.582 196.418C106.203 187.039 98.7639 175.905 93.6882 163.651C88.6124 151.397 86 138.264 86 125C86 111.736 88.6124 98.6029 93.6882 86.349C98.7639 74.0951 106.204 62.9609 115.582 53.5822C124.961 44.2035 136.095 36.7639 148.349 31.6882C160.603 26.6124 173.736 24 187 24L187 125V226Z",
-                duration: 1000
+                targets: '.box4_1',
+                x: '92',
+                y: '30',
+                width: '80',
+                height: '80',
+                duration: 3000
             }),
             anime({
-                targets: '.box3_2',
-                d: "M187 226C213.787 226 239.477 215.359 258.418 196.418C277.359 177.477 288 151.787 288 125C288 98.2131 277.359 72.5234 258.418 53.5822C239.477 34.641 213.787 24 187 24L187 125V226Z",
-                duration: 1000
+                targets: '.box4_2',
+                x: '202',
+                y: '30',
+                width: '80',
+                height: '80',
+                duration: 3000
             }),
             anime({
-                targets: '.box3_3',
-                cx: "142",
-                cy: "-269",
-                duration: 1000
+                targets: '.box4_3',
+                x: '92',
+                y: '140',
+                width: '80',
+                height: '80',
+                duration: 3000
             }),
             anime({
-                targets: '.box3_4',
-                cx: "232",
-                cy: "381",
-                duration: 1000
+                targets: '.box4_4',
+                x: '202',
+                y: '140',
+                width: '80',
+                height: '80',
+                duration: 3000
             }),
-        ]
+        ];
     }
 })
 

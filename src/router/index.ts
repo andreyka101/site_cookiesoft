@@ -33,6 +33,11 @@ const router = createRouter({
       name: 'big-business',
       component: BigBusinessView,
     },
+    {
+      path: '/big-business',
+      name: 'big-business',
+      component: BigBusinessView,
+    },
   ],
 })
 export default router

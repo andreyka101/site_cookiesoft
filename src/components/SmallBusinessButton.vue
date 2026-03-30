@@ -1,43 +1,39 @@
 <style scoped lang="scss">
-.flex_w {
+.small_business_button {
     .svg_div {
-        display: inline-block;
+        display: inline-flex;
         border: 5px #323232 solid;
         border-radius: 20px;
         background-color: #fff;
         transition: 0.5s;
 
         svg {
-            width: 150px;
-            height: 100px;
-            // display: block;
+            // width: 150px;
+            // height: 100px;
         }
     }
 
-    display: flex;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 170px auto;
     align-items: center;
-    justify-content: center;
-    justify-content: space-between;
     background-color: #404040bc;
     border-radius: 20px;
     margin: 2px;
     color: #ffffff;
     width: 800px;
-    padding: 20px;
-    padding-right: 70px;
+    padding: 5px;
+    // padding-right: 70px;
     margin: auto;
     transition: 0.5s;
+    text-align: center;
 }
 
-.flex_w:hover {
-    color: #ceffff;
-    transition: 1s;
+.small_business_button:hover {
     background-color: #404040;
-
-    .svg_div {
-        background-color: #ceffff;
-        transition: 1s;
-    }
 }
 
 .link {
@@ -71,7 +67,8 @@
     </div> -->
     <div style="display: flex;">
         <RouterLink class="link" to="/small-business">
-            <div class="flex_w" @mouseover="hover_mouse_small = true" @mouseleave="hover_mouse_small = false">
+            <div class="flex_w small_business_button" @mouseover="hover_mouse_small = true"
+                @mouseleave="hover_mouse_small = false">
                 <div class="svg_div">
                     <svg viewBox="0 0 375 250" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <polygon class="box1_1" points="78,207 187,43 187,207" fill="#404040" />

@@ -4,6 +4,7 @@
     --wid: 1px;
     --hei: 1px;
 }
+
 // #bddbff
 
 .transparent_box {
@@ -11,7 +12,7 @@
     // background-color: var(--plshldColor);
     backdrop-filter: blur(40px);
     border-radius: 15px;
-    margin: 10px;
+    margin: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +20,12 @@
     height: var(--hei);
     width: var(--wid);
     border: 0px #ff1515 solid;
+    transition: 0.5s;
+}
+
+.transparent_black {
+    background-color: #404040;
+    color: #fff;
 }
 </style>
 
