@@ -19,7 +19,7 @@
 
   footer {
     margin-top: 100px;
-    height: 4000px;
+    height: 400px;
     background-color: #404040;
     border-radius: 15px;
   }

@@ -25,128 +25,102 @@ onUnmounted(() => {
 
 
 
-<script setup lang="ts">
-import { ref, onMounted, nextTick } from 'vue';
-
-const targetSection = ref<HTMLElement | null>(null);
-const isMoved = ref(false);
-const buttonRef = ref<HTMLElement | null>(null);
-
-const animateButton = async (toMoved: boolean) => {
-    if (!buttonRef.value) return;
-
-    // 1. First: Запоминаем текущую позицию кнопки перед сменой стейта
-    const firstRect = buttonRef.value.getBoundingClientRect();
-
-    // 2. Меняем состояние (переключаем v-if в шаблоне)
-    isMoved.value = toMoved;
-
-    // 3. Ждем, пока Vue перерисует кнопку в новом месте DOM
-    await nextTick();
-    if (!buttonRef.value) return;
-
-    // 4. Last: Запоминаем новую позицию
-    const lastRect = buttonRef.value.getBoundingClientRect();
-
-    // 5. Invert: Вычисляем дельту
-    const invertX = firstRect.left - lastRect.left;
-    const invertY = firstRect.top - lastRect.top;
-
-    // Мгновенно переносим кнопку визуально в старую точку
-    buttonRef.value.style.transition = 'none';
-    buttonRef.value.style.transform = `translate(${invertX}px, ${invertY}px)`;
-
-    // 6. Play: Плавно возвращаем в 0 (на новое место)
-    requestAnimationFrame(() => {
-        if (!buttonRef.value) return;
-        buttonRef.value.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        buttonRef.value.style.transform = 'translate(0, 0)';
-    });
-};
-
-onMounted(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-        // Если блок появился — летим в центр, если исчез — возвращаемся в угол
-        if (entry.isIntersecting && !isMoved.value) {
-            animateButton(true);
-        } else if (!entry.isIntersecting && isMoved.value) {
-            animateButton(false);
-        }
-    }, {
-        rootMargin: '0px 0px -35% 0px',
-        threshold: 0.1 // Сработает сразу, как только край блока покажется/скроется
-    });
-
-    if (targetSection.value) observer.observe(targetSection.value);
-});
-</script>
-
 <template>
-    <div class="container">
-        <div class="spacer">Листай вниз...</div>
+    <!-- Кнопка, которая изначально фиксирована в правом нижнем углу -->
+    <button ref="fixedBtn" class="request-btn" :class="{ moving: isMoving }" @transitionend="onTransitionEnd">
+        Оставить заявку
+    </button>
 
-        <!-- Целевой блок -->
-        <div ref="targetSection" class="target-block">
-            <h2>Секция с формой</h2>
-            <div class="slot">
-                <!-- Кнопка ВНУТРИ блока -->
-                <button v-if="isMoved" ref="buttonRef" class="btn relative">
-                    Оставить заявку
-                </button>
-            </div>
-        </div>
+    <!-- Какой‑то контент, чтобы было место для прокрутки -->
+    <section class="content">
+        <p v-for="i in 30" :key="i">Lorem ipsum dolor sit amet {{ i }}</p>
+    </section>
 
-        <div class="spacer">Листай обратно вверх...</div>
-
-        <!-- Кнопка FIXED (внизу справа) -->
-        <button v-if="!isMoved" ref="buttonRef" class="btn fixed">
-            Оставить заявку
-        </button>
+    <!-- Блок‑цель. Когда он появится в зоне видимости – запускаем анимацию -->
+    <div ref="targetBlock" class="target">
+        Здесь будет кнопка после перемещения
     </div>
 </template>
 
-<style scoped>
-.spacer {
-    height: 120vh;
-    background: #f9f9f9;
-    padding: 20px;
+<script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+/* Ссылки на элементы */
+const fixedBtn = ref<HTMLButtonElement | null>(null)
+const targetBlock = ref<HTMLElement | null>(null)
+
+/* Флаг – анимируем кнопку сейчас? */
+const isMoving = ref(false)
+
+/* Храним координаты начала и конца, чтобы задать transform */
+let startRect: DOMRect | null = null
+let endRect: DOMRect | null = null
+
+/* IntersectionObserver – следит за появлением targetBlock */
+let observer: IntersectionObserver | null = null
+
+onMounted(() => {
+    if (!targetBlock.value) return
+
+    observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((e) => {
+                // Запускаем анимацию только один раз, когда блок впервые попал в viewport
+                if (e.isIntersecting && !isMoving.value) {
+                    startAnimation()
+                    // После первого срабатывания наблюдатель можно отключить
+                    observer?.disconnect()
+                }
+            })
+        },
+        { threshold: 0.5 } // половина блока должна быть видна
+    )
+
+    observer.observe(targetBlock.value)
+})
+
+onBeforeUnmount(() => {
+    observer?.disconnect()
+})
+
+/* ----------------- Анимация ----------------- */
+function startAnimation() {
+    if (!fixedBtn.value || !targetBlock.value) return
+
+    // Текущие координаты кнопки (фиксированная в правом‑нижнем углу)
+    startRect = fixedBtn.value.getBoundingClientRect()
+    // Координаты места, куда нужно переместить кнопку
+    endRect = targetBlock.value.getBoundingClientRect()
+
+    /* Вычисляем смещение по X и Y.
+     * Т.к. кнопка будет переключена в `position:relative`,
+     * анимацию делаем через transform – это гарантирует плавность. */
+    const dx = endRect.left - startRect.left
+    const dy = endRect.top - startRect.top
+
+    // Запоминаем смещение в CSS‑переменной (чтобы использовать её в стилях)
+    fixedBtn.value.style.setProperty('--dx', `${dx}px`)
+    fixedBtn.value.style.setProperty('--dy', `${dy}px`)
+
+    // Включаем класс, который задаёт transition и transform
+    isMoving.value = true
 }
 
-.target-block {
-    height: 300px;
-    background: #e3f2fd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed #2196f3;
-}
+/* После окончания CSS‑транзиции переводим кнопку в обычный поток */
+function onTransitionEnd(e: TransitionEvent) {
+    if (e.propertyName !== 'transform') return
 
-.slot {
-    height: 50px;
-    display: flex;
-    align-items: center;
-}
+    const btn = fixedBtn.value
+    if (!btn) return
 
-.btn {
-    padding: 15px 30px;
-    background: #2196f3;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-}
+    // Убираем все временные стили и классы
+    btn.style.removeProperty('--dx')
+    btn.style.removeProperty('--dy')
+    btn.classList.remove('fixed-btn')
+    btn.classList.add('relative-btn')
 
-.fixed {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+    // Теперь кнопка будет вести себя как обычный элемент (position: relative)
+    isMoving.value = false
 }
-
-.relative {
-    position: relative;
-}
-</style>
+</script>
+/* ----------------- End ----------------- */
