@@ -1009,14 +1009,14 @@ h3 {
   </a>
 
 
-  <!-- <div>
+  <div>
     <div style="background-color: antiquewhite; width: 150px; height: 150px;">
       <div style="background-color: #000; width: 50%; height: 50%; top: 50%; position: relative;">
         <div style="background-color: #fff; width: 50%; height: 50%;  position: relative;">
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script setup lang="ts">
