@@ -250,6 +250,17 @@
 
     <BusinessCard v-if="activeTab == 'Сайт-визитка'" />
     <LandingPage v-if="activeTab == 'Лендинг'" />
+    <BlogNewsletter v-if="activeTab == 'Блог + рассылка'" />
+    <LandingPageCollectingLeads v-if="activeTab == 'Лендинг для сбора лидов'" />
+    <MobileApplication v-if="activeTab == 'Мобильное приложение'" />
+    <OnlineRegistration v-if="activeTab == 'онлайн-записью'" />
+    <OnlineStore v-if="activeTab == 'Интернет-магазин'" />
+    <PersonalAccount v-if="activeTab == 'личный кабинет'" />
+    <PortfolioWebsite v-if="activeTab == 'Сайт-портфолио'" />
+    <PromoSite v-if="activeTab == 'Промо-сайт'" />
+    <ServiceCalculator v-if="activeTab == 'Калькулятор услуг'" />
+    <WebApplication v-if="activeTab == 'веб-приложение (MVP)'" />
+    <WebsiteCatalog v-if="activeTab == 'Сайт с каталогом'" />
 
     <!-- оставить заявку -->
     <div class="submit_request_box_non">
@@ -400,6 +411,17 @@
 import TransparentBox from "../components/TransparentBox.vue";
 import BusinessCard from "../components/smallBusinessText/BusinessCard.vue";
 import LandingPage from "../components/smallBusinessText/LandingPage.vue";
+import BlogNewsletter from "../components/smallBusinessText/BlogNewsletter.vue";
+import LandingPageCollectingLeads from "../components/smallBusinessText/LandingPageCollectingLeads.vue";
+import MobileApplication from "../components/smallBusinessText/MobileApplication.vue";
+import OnlineRegistration from "../components/smallBusinessText/OnlineRegistration.vue";
+import OnlineStore from "../components/smallBusinessText/OnlineStore.vue";
+import PersonalAccount from "../components/smallBusinessText/PersonalAccount.vue";
+import PortfolioWebsite from "../components/smallBusinessText/PortfolioWebsite.vue";
+import PromoSite from "../components/smallBusinessText/PromoSite.vue";
+import ServiceCalculator from "../components/smallBusinessText/ServiceCalculator.vue";
+import WebApplication from "../components/smallBusinessText/WebApplication.vue";
+import WebsiteCatalog from "../components/smallBusinessText/WebsiteCatalog.vue";
 
 import { ref, onMounted, nextTick } from 'vue';
 
