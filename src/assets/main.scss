@@ -2,3 +2,172 @@
     max-width: 2600px;
     margin: auto;
 }
+
+// /* ==============================
+//    БАЗОВЫЕ СТИЛИ И ТИПОГРАФИКА
+//    ============================== */
+
+// /* Мобильные (до 768px) */
+// html {
+//     font-size: 16px;
+//     line-height: 1.6;
+// }
+
+// body,
+// p {
+//     font-size: 16px;
+//     line-height: 1.6;
+// }
+
+// small,
+// .text-small {
+//     font-size: 15px;
+//     line-height: 1.5;
+// }
+// strong {
+//     font-weight: 600;
+// }
+// /* Заголовки для мобильных */
+// h1 {
+//     font-size: 32px;
+//     line-height: 1.2;
+//     margin-bottom: 1.25rem;
+//     font-weight: 700;
+// }
+
+// h2 {
+//     font-size: 26px;
+//     line-height: 1.3;
+//     margin-bottom: 1rem;
+//     font-weight: 700;
+// }
+
+// h3 {
+//     font-size: 22px;
+//     line-height: 1.35;
+//     margin-bottom: 0.875rem;
+//     font-weight: 600;
+// }
+
+// h4 {
+//     font-size: 19px;
+//     line-height: 1.4;
+//     margin-bottom: 0.75rem;
+//     font-weight: 600;
+// }
+
+// /* Гарантируем, что h4 > p */
+// h4 {
+//     min-font-size: 18px;
+// }
+
+// /* ==============================
+//    ПЛАНШЕТЫ (768px-1024px)
+//    ============================== */
+// @media (min-width: 768px) {
+//     html {
+//         font-size: 17px;
+//     }
+
+//     body,
+//     p {
+//         font-size: 18px;
+//     }
+
+//     small,
+//     .text-small {
+//         font-size: 16px;
+//     }
+
+//     h1 {
+//         font-size: 40px;
+//         margin-bottom: 1.5rem;
+//     }
+
+//     h2 {
+//         font-size: 32px;
+//         margin-bottom: 1.25rem;
+//     }
+
+//     h3 {
+//         font-size: 26px;
+//         margin-bottom: 1rem;
+//     }
+
+//     h4 {
+//         font-size: 22px;
+//         margin-bottom: 0.875rem;
+//     }
+// }
+
+// /* ==============================
+//    ДЕСКТОПЫ (1024px+)
+//    ============================== */
+// @media (min-width: 1024px) {
+//     html {
+//         font-size: 17px;
+//     }
+
+//     body,
+//     p {
+//         font-size: 18px;
+//     }
+
+//     small,
+//     .text-small {
+//         font-size: 16px;
+//     }
+
+//     /* Равномерное уменьшение: каждый заголовок меньше предыдущего примерно на 4-6px */
+//     h1 {
+//         font-size: 36px; /* Было 40px на планшете */
+//     }
+
+//     h2 {
+//         font-size: 30px; /* На 6px меньше h1 */
+//     }
+
+//     h3 {
+//         font-size: 24px; /* На 6px меньше h2 */
+//     }
+
+//     h4 {
+//         font-size: 20px; /* На 4px меньше h3, но на 2px больше текста (18px) */
+//     }
+
+//     /* Убедимся, что h4 не меньше текста */
+//     h4 {
+//         min-font-size: 20px;
+//     }
+// }
+
+/* ==============================
+   БОЛЬШИЕ ЭКРАНЫ (1600px+)
+   ============================== */
+@media (min-width: 1600px) {
+    body,
+    p {
+        font-size: 24px;
+    }
+
+    // small,
+    // .text-small {
+    //     font-size: 17px;
+    // }
+
+    // h1 {
+    //     font-size: 42px;
+    // }
+
+    // h2 {
+    //     font-size: 34px;
+    // }
+
+    // h3 {
+    //     font-size: 28px;
+    // }
+
+    // h4 {
+    //     font-size: 22px;
+    // }
+}
