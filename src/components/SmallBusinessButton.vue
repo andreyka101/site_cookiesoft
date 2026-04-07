@@ -75,7 +75,7 @@
                         <polygon class="box1_2" points="296,207 187,43 187,207" fill="#404040" />
                     </svg>
                 </div>
-                <div class="center_text">
+                <div class="center_text button_max_text">
                     <slot></slot>
                 </div>
             </div>

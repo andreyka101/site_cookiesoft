@@ -97,7 +97,7 @@
                         <circle class="box3_4" cx="232" cy="381" r="45" fill="#404040" />
                     </svg>
                 </div>
-                <div class="center_text">
+                <div class="center_text button_max_text">
                     <slot></slot>
                 </div>
             </div>

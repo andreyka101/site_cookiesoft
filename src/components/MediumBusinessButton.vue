@@ -90,7 +90,7 @@
                         <rect class="box2_3" x="289" y="425" width="200" height="200" fill="#404040" />
                     </svg>
                 </div>
-                <div class="center_text">
+                <div class="center_text button_max_text">
                     <slot></slot>
                 </div>
             </div>

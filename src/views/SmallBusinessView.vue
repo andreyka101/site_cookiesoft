@@ -41,7 +41,7 @@
 
     .package_button {
         flex: 1 1 auto;
-        font-size: 22px;
+        // font-size: 22px;
         background-color: #404040; // 1 background-button
         color: #ffffff;
         border-radius: 8px;
@@ -52,7 +52,7 @@
     }
 
     .package_button:hover {
-        font-size: 24px;
+        // font-size: 24px;
         background-color: #404040aa; // 1 background-button
         margin: 2px -5px;
         padding: 13px 20px;
@@ -60,7 +60,7 @@
 
     .active_button {
         flex: 1 1 auto;
-        font-size: 22px;
+        // font-size: 22px;
         color: #ffffff;
         border-radius: 8px;
         padding: 10px 20px;
