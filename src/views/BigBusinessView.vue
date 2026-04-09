@@ -188,7 +188,7 @@
     </TransparentBox> -->
     <TransparentBox>
         <h1>
-            Разработка среднего бизнеса
+            Разработку крупного бизнеса
         </h1>
     </TransparentBox>
     <TransparentBox>
@@ -233,10 +233,10 @@
                 :class="[{ active_button: activeTab == 'Система мониторинга' }, { package_button: activeTab != 'Система мониторинга' }]">
                 Система мониторинга и алертинга (DevOps-решение)
             </button>
-            <button @click="activeTab = 'Микросервисная архитектура'"
+            <!-- <button @click="activeTab = 'Микросервисная архитектура'"
                 :class="[{ active_button: activeTab == 'Микросервисная архитектура' }, { package_button: activeTab != 'Микросервисная архитектура' }]">
                 Микросервисная архитектура под конкретную задачу
-            </button>
+            </button> -->
             <button @click="activeTab = 'Система с разграничением'"
                 :class="[{ active_button: activeTab == 'Система с разграничением' }, { package_button: activeTab != 'Система с разграничением' }]">
                 Система с разграничением доступа (роли: админ, директор, менеджер, оператор)
@@ -244,6 +244,7 @@
         </div>
     </TransparentBox>
 
+    <BusinessCard v-if="activeTab == 'Система с разграничением'" />
     <!-- <BusinessCard v-if="activeTab == 'Сайт-визитка'" /> -->
 
     <!-- оставить заявку -->
@@ -393,11 +394,12 @@
 
 <script setup lang="ts">
 import TransparentBox from "../components/TransparentBox.vue";
+import BusinessCard from "../components/bigBusinessText/SystemDemarcation.vue";
 // import BusinessCard from "../components/bigBusinessText";
 
 import { ref, onMounted, nextTick } from 'vue';
 
-const activeTab = ref<string>('Сайт-визитка')
+const activeTab = ref<string>('Система с разграничением')
 
 
 

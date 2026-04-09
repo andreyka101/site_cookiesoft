@@ -144,7 +144,8 @@
 /* ==============================
    БОЛЬШИЕ ЭКРАНЫ (1600px+)
    ============================== */
-@media (min-width: 1600px) {
+// @media (min-width: 1600px) {
+@media (min-width: 100px) {
     body,
     p {
         font-size: 24px;

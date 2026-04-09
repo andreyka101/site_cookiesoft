@@ -230,10 +230,10 @@
                 :class="[{ active_button: activeTab == 'Компьютерное приложение для офиса' }, { package_button: activeTab != 'Компьютерное приложение для офиса' }]">
                 Компьютерное приложение для офиса (Windows / macOS)
             </button>
-            <button @click="activeTab = 'Дашборд с аналитикой для руководителя'"
+            <!-- <button @click="activeTab = 'Дашборд с аналитикой для руководителя'"
                 :class="[{ active_button: activeTab == 'Дашборд с аналитикой для руководителя' }, { package_button: activeTab != 'Дашборд с аналитикой для руководителя' }]">
                 Дашборд с аналитикой для руководителя
-            </button>
+            </button> -->
             <button @click="activeTab = 'Система управления'"
                 :class="[{ active_button: activeTab == 'Система управления' }, { package_button: activeTab != 'Система управления' }]">
                 Система управления заказами и доставкой
@@ -245,6 +245,7 @@
         </div>
     </TransparentBox>
 
+    <OnlineStore v-if="activeTab == 'Интернет-магазин'" />
     <!-- <BusinessCard v-if="activeTab == 'Сайт-визитка'" /> -->
 
     <!-- оставить заявку -->
@@ -394,11 +395,12 @@
 
 <script setup lang="ts">
 import TransparentBox from "../components/TransparentBox.vue";
+import OnlineStore from "../components/mediumBusinessText/OnlineStore.vue";
 // import BusinessCard from "../components/mediumBusinessText";
 
 import { ref, onMounted, nextTick } from 'vue';
 
-const activeTab = ref<string>('Сайт-визитка')
+const activeTab = ref<string>('Интернет-магазин')
 
 
 
