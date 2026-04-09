@@ -220,7 +220,7 @@ CMS уязвимее из-за популярности (взламывают м
                 </div> -->
             </div>
             <div class="price_center">
-                от 40 000 ₽
+                от 280 000 ₽
             </div>
         </div>
     </TransparentBox>

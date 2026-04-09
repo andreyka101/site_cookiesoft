@@ -35,6 +35,21 @@
     &:hover {
         background-color: #404040;
     }
+
+    @media screen and (max-width: 1600px) {
+        width: 670px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        width: 550px;
+    }
+    @media screen and (max-width: 800px) {
+        width: 450px;
+    }
+    @media screen and (max-width: 560px) {
+        grid-template-columns: 90px auto;
+        width: 250px;
+    }
 }
 
 // .flex_w:hover {

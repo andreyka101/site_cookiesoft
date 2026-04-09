@@ -141,11 +141,57 @@
 //     }
 // }
 
-/* ==============================
-   БОЛЬШИЕ ЭКРАНЫ (1600px+)
-   ============================== */
 // @media (min-width: 1600px) {
-
+/* ==============================
+    БОЛЬШИЕ ЭКРАНЫ (1600px+)
+    ============================== */
+@media (min-width: 1600px) {
+    body,
+    p {
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 42px;
+    }
+    .h3_list {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .button_mini_text {
+        font-size: 24px;
+    }
+    .small_business_box,
+    .medium_business_box,
+    .big_business_box,
+    .portfolio_box {
+        .big_h2 {
+            font-size: 45px;
+        }
+        .color_big_text {
+            font-size: 28px;
+        }
+        .button_max_text {
+            font-size: 26px;
+        }
+    }
+    .package_button {
+        font-size: 22px;
+    }
+    .package_button:hover {
+        font-size: 24px;
+    }
+    .active_button {
+        font-size: 22px;
+    }
+    .price_center {
+        font-size: 36px;
+    }
+    #submit_request {
+        font-size: 46px;
+    }
+}
 /* ДЕСКТОПЫ (1024px - 1599px) */
 @media (min-width: 1024px) and (max-width: 1599px) {
     body,
@@ -294,53 +340,5 @@
     }
     #submit_request {
         font-size: 30px;
-    }
-}
-
-@media (min-width: 1600px) {
-    body,
-    p {
-        font-size: 24px;
-    }
-    h1 {
-        font-size: 42px;
-    }
-    .h3_list {
-        font-size: 25px;
-    }
-    h2 {
-        font-size: 30px;
-    }
-    .button_mini_text {
-        font-size: 24px;
-    }
-    .small_business_box,
-    .medium_business_box,
-    .big_business_box,
-    .portfolio_box {
-        .big_h2 {
-            font-size: 45px;
-        }
-        .color_big_text {
-            font-size: 28px;
-        }
-        .button_max_text {
-            font-size: 26px;
-        }
-    }
-    .package_button {
-        font-size: 22px;
-    }
-    .package_button:hover {
-        font-size: 24px;
-    }
-    .active_button {
-        font-size: 22px;
-    }
-    .price_center {
-        font-size: 36px;
-    }
-    #submit_request {
-        font-size: 46px;
     }
 }

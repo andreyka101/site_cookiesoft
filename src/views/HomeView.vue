@@ -457,11 +457,11 @@ h3 {
   z-index: 1000;
   // margin-right: 50px;
   // margin-bottom: 10px;
-
+  
   .color_blue {
     transition: .5s;
   }
-
+  
   .color_red {
     transition: .7s;
   }
@@ -481,11 +481,11 @@ h3 {
   animation-play-state: paused;
   // border: #ffffff 4px solid;
   background-image: repeating-linear-gradient(-45deg, #8dc8c8, #8dc8c8 1rem, #ce7f7f 1rem, #ce7f7f 2rem);
-
+  
   .color_blue {
     color: #dbfef7;
   }
-
+  
   .color_red {
     color: #ffe5e5;
   }
@@ -495,6 +495,34 @@ h3 {
   display: flex;
   justify-content: center;
   height: 80px;
+}
+
+/* ДЕСКТОПЫ (1024px - 1599px) */
+@media (min-width: 1024px) and (max-width: 1599px) {}
+
+/* ПЛАНШЕТЫ (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .submit_request_block {
+    height: 66.7px;
+  }
+}
+
+/* МОБИЛЬНЫЕ (до 767px) */
+@media (max-width: 767px) {
+  .submit_request_block {
+    height: 60.7px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .flex_w .button_max_text span {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  #submit_request{
+    padding: 8px 14px;
+  }
 }
 </style>
 
@@ -622,7 +650,10 @@ h3 {
         </p>
 
         <SmallBusinessButton>
-          Разработка малого бизнеса
+          <span>
+            Разработка
+          </span>
+          малого бизнеса
         </SmallBusinessButton>
       </div>
     </TransparentBox>
@@ -708,7 +739,10 @@ h3 {
           медицинских клиник.
         </p>
         <MediumBusinessButton>
-          Разработка среднего бизнеса
+          <span>
+            Разработка
+          </span>
+          среднего бизнеса
         </MediumBusinessButton>
       </div>
     </TransparentBox>
@@ -796,7 +830,10 @@ h3 {
           IT-проектов, для доработки и оптимизации существующих систем, где требуется глубокое погружение.
         </p>
         <BigBusinessButton>
-          Разработку крупного бизнеса
+          <span>
+            Разработка
+          </span>
+          крупного бизнеса
         </BigBusinessButton>
       </div>
     </TransparentBox>

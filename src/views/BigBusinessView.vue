@@ -244,8 +244,18 @@
         </div>
     </TransparentBox>
 
-    <BusinessCard v-if="activeTab == 'Система с разграничением'" />
-    <!-- <BusinessCard v-if="activeTab == 'Сайт-визитка'" /> -->
+    <AnalyticalPlatform v-if="activeTab == 'Аналитическая платформа'" />
+    <ComputerApplicationEmployees v-if="activeTab == 'Компьютерное приложение для сотрудников'" />
+    <CorporatePortal v-if="activeTab == 'Корпоративный портал'" />
+    <ElectronicSystem v-if="activeTab == 'Система электронного'" />
+    <MarketplacePlatform v-if="activeTab == 'Маркетплейс'" />
+    <!-- <MicroserviceArchitecture v-if="activeTab == 'Микросервисная архитектура'" /> -->
+    <MobileApplication v-if="activeTab == 'Мобильное приложение'" />
+    <MonitoringSystem v-if="activeTab == 'Система мониторинга'" />
+    <OnlineStore v-if="activeTab == 'Интернет-магазин'" />
+    <SupplierPortal v-if="activeTab == 'Портал поставщиков'" />
+    <SystemDemarcation v-if="activeTab == 'Система с разграничением'" />
+    <WebApplication v-if="activeTab == 'Веб-приложение'" />
 
     <!-- оставить заявку -->
     <div class="submit_request_box_non">
@@ -394,8 +404,20 @@
 
 <script setup lang="ts">
 import TransparentBox from "../components/TransparentBox.vue";
-import BusinessCard from "../components/bigBusinessText/SystemDemarcation.vue";
-// import BusinessCard from "../components/bigBusinessText";
+
+
+import AnalyticalPlatform from "../components/bigBusinessText/AnalyticalPlatform.vue";
+import ComputerApplicationEmployees from "../components/bigBusinessText/ComputerApplicationEmployees.vue";
+import CorporatePortal from "../components/bigBusinessText/CorporatePortal.vue";
+import ElectronicSystem from "../components/bigBusinessText/ElectronicSystem.vue";
+import MarketplacePlatform from "../components/bigBusinessText/MarketplacePlatform.vue";
+import MicroserviceArchitecture from "../components/bigBusinessText/MicroserviceArchitecture.vue";
+import MobileApplication from "../components/bigBusinessText/MobileApplication.vue";
+import MonitoringSystem from "../components/bigBusinessText/MonitoringSystem.vue";
+import OnlineStore from "../components/bigBusinessText/OnlineStore.vue";
+import SupplierPortal from "../components/bigBusinessText/SupplierPortal.vue";
+import SystemDemarcation from "../components/bigBusinessText/SystemDemarcation.vue";
+import WebApplication from "../components/bigBusinessText/WebApplication.vue";
 
 import { ref, onMounted, nextTick } from 'vue';
 

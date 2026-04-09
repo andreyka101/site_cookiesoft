@@ -245,8 +245,17 @@
         </div>
     </TransparentBox>
 
+    <ComputerApplicationOffice v-if="activeTab == 'Компьютерное приложение для офиса'" />
+    <ControlSystem v-if="activeTab == 'Система управления'" />
+    <CorporateWebsite v-if="activeTab == 'Корпоративный сайт'" />
+    <DatabaseAdminPanel v-if="activeTab == 'База данных с админ-панелью'" />
+    <MobileApplicationClients v-if="activeTab == 'Мобильное приложение для клиентов'" />
+    <MobileApplicationCouriers v-if="activeTab == 'Мобильное приложение для курьеров'" />
     <OnlineStore v-if="activeTab == 'Интернет-магазин'" />
-    <!-- <BusinessCard v-if="activeTab == 'Сайт-визитка'" /> -->
+    <SubscriptionService v-if="activeTab == 'Сервис с подпиской'" />
+    <SupplierPortal v-if="activeTab == 'Портал для поставщиков'" />
+    <WebApplicationClients v-if="activeTab == 'Веб-приложение для клиентов'" />
+    <WebApplicationEmployees v-if="activeTab == 'Веб-приложение для сотрудников'" />
 
     <!-- оставить заявку -->
     <div class="submit_request_box_non">
@@ -395,8 +404,18 @@
 
 <script setup lang="ts">
 import TransparentBox from "../components/TransparentBox.vue";
+import ComputerApplicationOffice from "../components/mediumBusinessText/ComputerApplicationOffice.vue";
+import ControlSystem from "../components/mediumBusinessText/ControlSystem.vue";
+import CorporateWebsite from "../components/mediumBusinessText/CorporateWebsite.vue";
+// import BusinessCard from "../components/mediumBusinessText/DashboardManagers_non.vue";
+import DatabaseAdminPanel from "../components/mediumBusinessText/DatabaseAdminPanel.vue";
+import MobileApplicationClients from "../components/mediumBusinessText/MobileApplicationClients.vue";
+import MobileApplicationCouriers from "../components/mediumBusinessText/MobileApplicationCouriers.vue";
 import OnlineStore from "../components/mediumBusinessText/OnlineStore.vue";
-// import BusinessCard from "../components/mediumBusinessText";
+import SubscriptionService from "../components/mediumBusinessText/SubscriptionService.vue";
+import SupplierPortal from "../components/mediumBusinessText/SupplierPortal.vue";
+import WebApplicationClients from "../components/mediumBusinessText/WebApplicationClients.vue";
+import WebApplicationEmployees from "../components/mediumBusinessText/WebApplicationEmployees.vue";
 
 import { ref, onMounted, nextTick } from 'vue';
 

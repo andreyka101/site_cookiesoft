@@ -23,7 +23,11 @@
     background-color: #404040;
     border-radius: 15px;
   }
-
+  @media screen and (max-width: 670px) {
+    .blockCookie{
+      display: none;
+    }
+  }
   // @keyframes gradient {
   //   100% {
   //     background-position: 100% 100%;
