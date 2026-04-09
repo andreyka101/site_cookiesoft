@@ -25,13 +25,13 @@
 
 }
 
-@media screen and (max-width: 800px) {
-    .button_header div {
-        width: 40px;
-        height: 40px;
-    }
+// @media screen and (max-width: 800px) {
+//     .button_header div {
+//         width: 40px;
+//         height: 40px;
+//     }
 
-}
+// }
 
 @media(hover:hover) {
 

@@ -32,6 +32,8 @@
     text-align: center;
 }
 
+@media screen and (max-width: 460px) {}
+
 .small_business_button:hover {
     background-color: #404040;
 }

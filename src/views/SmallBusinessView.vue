@@ -87,7 +87,7 @@
 
     .price_center {
         text-align: center;
-        font-size: 28px;
+        // font-size: 36px;
         color: #9e4b4b;
         font-weight: 600;
     }
