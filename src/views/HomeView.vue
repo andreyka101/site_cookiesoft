@@ -457,11 +457,11 @@ h3 {
   z-index: 1000;
   // margin-right: 50px;
   // margin-bottom: 10px;
-  
+
   .color_blue {
     transition: .5s;
   }
-  
+
   .color_red {
     transition: .7s;
   }
@@ -481,11 +481,11 @@ h3 {
   animation-play-state: paused;
   // border: #ffffff 4px solid;
   background-image: repeating-linear-gradient(-45deg, #8dc8c8, #8dc8c8 1rem, #ce7f7f 1rem, #ce7f7f 2rem);
-  
+
   .color_blue {
     color: #dbfef7;
   }
-  
+
   .color_red {
     color: #ffe5e5;
   }
@@ -519,8 +519,9 @@ h3 {
     display: block;
   }
 }
+
 @media screen and (max-width: 450px) {
-  #submit_request{
+  #submit_request {
     padding: 8px 14px;
   }
 }

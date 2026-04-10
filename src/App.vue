@@ -23,11 +23,13 @@
     background-color: #404040;
     border-radius: 15px;
   }
+
   @media screen and (max-width: 670px) {
-    .blockCookie{
+    .blockCookie {
       display: none;
     }
   }
+
   // @keyframes gradient {
   //   100% {
   //     background-position: 100% 100%;
@@ -124,7 +126,26 @@
         </span>
       </div>
     </TransparentBox>
-    <div v-if="route.path != '/portfolio'"
+    <div style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">
+      <div class="portfolio_none" style="display: flex;">
+        <ButtonHeaderTop id="but_id_1" n_id="but_id_1" tag="top" link_photo="/Vector top.svg">
+        </ButtonHeaderTop>
+        <ButtonHeader id="but_id_2" n_id="but_id_2" tag="telegram" link_photo="/telegram.svg">
+        </ButtonHeader>
+        <ButtonHeader id="but_id_3" n_id="but_id_3" tag="whatsapp" link_photo="/whatssapp.svg">
+        </ButtonHeader>
+        <ButtonHeader id="but_id_4" n_id="but_id_4" tag="phone" link_photo="/phone.svg">
+        </ButtonHeader>
+      </div>
+      <div>
+        <TransparentBox id="information_block" :num="17" style="font-weight: 600;">
+          +79528576944
+        </TransparentBox>
+      </div>
+    </div>
+
+
+    <!-- <div v-if="route.path != '/portfolio'"
       style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">
       <div class="portfolio_none" style="display: flex;">
         <ButtonHeaderTop id="but_id_1" n_id="but_id_1" tag="top" link_photo="/Vector top.svg">
@@ -148,7 +169,7 @@
           link_photo="/profile.svg">
         </ButtonHeader>
       </div>
-    </div>
+    </div> -->
   </header>
   <RouterView></RouterView>
 

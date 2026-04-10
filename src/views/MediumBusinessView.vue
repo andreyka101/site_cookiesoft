@@ -1,4 +1,4 @@
-<style scoped lang="scss">
+<style lang="scss">
 .previe_visualizer {
     display: grid !important;
     justify-content: normal !important;
@@ -79,6 +79,13 @@
         // grid-template-rows: auto auto;
         // gap: 20px;
         // justify-content: space-around;
+
+        .black_block {
+            background-color: #404040; // 1 background-button
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 10px 20px;
+        }
 
         .div_list {
             // width: 500px;
