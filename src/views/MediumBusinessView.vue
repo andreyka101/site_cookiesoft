@@ -53,9 +53,11 @@
 
     .package_button:hover {
         // font-size: 24px;
-        background-color: #404040aa; // 1 background-button
-        margin: 2px -5px;
-        padding: 13px 20px;
+        // background-color: #404040aa; // 1 background-button
+        background-color: #565656d9; // 1 background-button
+        margin: 2px -15px;
+        // padding: 13px 20px;
+        z-index: 10;
     }
 
     .active_button {
@@ -75,7 +77,7 @@
 .center_text {
     .all_lists {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
         // grid-template-rows: auto auto;
         // gap: 20px;
         // justify-content: space-around;
@@ -85,6 +87,25 @@
             color: #ffffff;
             border-radius: 8px;
             padding: 10px 20px;
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-bottom: 10px;
+            // justify-items: center;
+            .h3X{
+                grid-column: span 3;
+                background-color: #ffffff;
+                color: #404040;
+                padding: 0 20px;
+                border-radius: 8px;
+                margin: 10px 0;
+                // text-align: center;
+            }
+            @media screen and (max-width: 900px){
+                grid-template-columns: auto auto;
+                // background-color: #ffffff;
+
+            }
         }
 
         .div_list {

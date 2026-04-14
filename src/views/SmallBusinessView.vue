@@ -53,9 +53,11 @@
 
     .package_button:hover {
         // font-size: 24px;
-        background-color: #404040aa; // 1 background-button
-        margin: 2px -5px;
-        padding: 13px 20px;
+        // background-color: #404040aa; // 1 background-button
+        background-color: #565656d9; // 1 background-button
+        margin: 2px -15px;
+        // padding: 13px 20px;
+        z-index: 10;
     }
 
     .active_button {
