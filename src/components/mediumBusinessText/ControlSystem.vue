@@ -1,4 +1,57 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.black_block {
+    grid-template-columns: 30% 30% 40% !important;
+
+    #n_list1 {
+        grid-row: 2 span !important;
+        padding: 0 10px;
+    }
+
+    #n_list2 {
+        grid-row: 2 span !important;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .black_block {
+        grid-template-columns: auto auto !important;
+        
+        .h3X {
+            grid-column: 2 span !important;
+        }
+        #n_list1 {
+            grid-row: 1 span !important;
+            padding: 0;
+        }
+
+        #n_list2 {
+            grid-row: 1 span !important;
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -21,7 +74,7 @@
                     <h3 class="h3X">
                         Что входит в решение:
                     </h3>
-                    <div class="div_list">
+                    <div class="div_list" id="n_list1">
                         <h3>
                             Для менеджеров (рабочее место):
                         </h3>
@@ -59,7 +112,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="div_list">
+                    <div class="div_list" id="n_list2">
                         <h3>
                             Для курьеров (мобильное приложение):
                         </h3>
@@ -194,19 +247,21 @@
                     <ul>
                         <li>
 
-                            Доставка готовых обедов по офисам: прием заказов до 10:00, построение маршрутов, контроль температуры (опционально)
+                            Доставка готовых обедов по офисам: прием заказов до 10:00, построение маршрутов, контроль
+                            температуры (опционально)
                         </li>
-                        
+
                         <li>
 
                             Аптека с доставкой: интеграция с кассой, статус «передан курьеру», подпись при получении
                         </li>
-                        
+
                         <li>
 
-                            Магазин мебели: крупногабаритная доставка, два курьера на заказ, подтверждение вскрытия упаковки
+                            Магазин мебели: крупногабаритная доставка, два курьера на заказ, подтверждение вскрытия
+                            упаковки
                         </li>
-                        
+
                         <li>
 
                             Служба доставки цветов: приоритетные заказы к 14 февраля, уведомление получателя

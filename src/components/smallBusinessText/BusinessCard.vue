@@ -1,4 +1,14 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+#n_list1 {
+    grid-row: 2 span;
+}
+
+@media screen and (max-width:800px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -17,7 +27,7 @@
                 репетиторы, адвокаты, фотографы, стартапы на стадии идеи.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -107,7 +117,7 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 40 000 ₽
+                от 10 000 ₽
             </div>
         </div>
     </TransparentBox>

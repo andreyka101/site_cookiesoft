@@ -1,4 +1,36 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+@media screen and (max-width:1300px) {
+    .black_block {
+        .div_list {
+            grid-column: 2 span !important;
+        }
+
+        #n_list1 {
+            grid-column: 1 span !important;
+            grid-row: 2 span !important;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+
+        }
+        
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -22,7 +54,7 @@
                     <h3 class="h3X">
                         Что входит в решение:
                     </h3>
-                    <div class="div_list">
+                    <div class="div_list" id="n_list1">
                         <h3>
                             Клиентская часть:
                         </h3>

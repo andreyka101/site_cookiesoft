@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+#black_b1 {
+    grid-template-columns: auto !important;
+
+    .h3X {
+        grid-column: 1 span !important;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -19,7 +47,7 @@
                 внутренние корпоративные приложения для тысяч сотрудников.
             </p>
             <div class="all_lists">
-                <div class="black_block">
+                <div class="black_block" id="black_b1">
                     <div class="div_list">
                         <h3 class="h3X">
                             Что входит в решение:
@@ -84,7 +112,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="black_block">
+                <div class="black_block" id="black_b2">
                     <h3 class="h3X">
                         Ключевые особенности для крупного бизнеса:
                     </h3>

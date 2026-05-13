@@ -1,4 +1,33 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.black_block {
+    grid-template-columns: auto auto !important;
+
+    .h3X {
+        grid-column: 2 span !important;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -107,19 +136,19 @@
                         <li>
                             Полный контроль над клиентской базой (вы не зависите от внешних CRM)
                         </li>
-                        
+
                         <li>
                             Снижение нагрузки на менеджеров (клиенты сами видят статусы и документы)
                         </li>
-                        
+
                         <li>
                             Повышение лояльности (прозрачность и удобство)
                         </li>
-                        
+
                         <li>
                             Возможность собирать статистику поведения клиентов
                         </li>
-                        
+
                         <li>
                             Легкая интеграция с вашей внутренней системой (1С, CRM, склад)
                         </li>

@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.div_list {
+    grid-column: 2 span !important;
+}
+
+#n_list1 {
+    grid-column: 1 span !important;
+    grid-row: 2 span;
+}
+
+.all_lists {
+    // grid-template-columns: auto auto auto !important;
+    grid-template-columns: 40% 20% 40% !important;
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+
+    #n_list1 {
+        grid-column: 1 span !important;
+    }
+
+    .div_list {
+        grid-column: 1 span !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -19,7 +47,7 @@
                 услугу.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -112,22 +140,22 @@
 
                             Лендинг для сбора email-адресов перед запуском онлайн-курса
                         </li>
-                        
+
                         <li>
 
                             Лендинг для записи на бесплатную консультацию юриста / психолога / фитнес-тренера
                         </li>
-                        
+
                         <li>
 
                             Лендинг для скачивания чек-листа «10 ошибок при запуске бизнеса»
                         </li>
-                        
+
                         <li>
 
                             Лендинг для регистрации на вебинар или мастер-класс
                         </li>
-                        
+
                         <li>
 
                             Лендинг для получения коммерческого предложения под ключ
@@ -153,7 +181,7 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 30 000 ₽
+                от 5 000 ₽
             </div>
         </div>
     </TransparentBox>

@@ -1,4 +1,27 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.black_block {
+    grid-template-columns: auto !important;
+
+    .h3X {
+        grid-column: 1 span !important;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-column: 1 span !important;
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -164,30 +187,31 @@
                             <span class="bold_text">
                                 Для сервисного центра:
                             </span>
-                            Заявка от клиента → назначение мастеру → статус «в работе» → фото выполненной работы → закрытие
+                            Заявка от клиента → назначение мастеру → статус «в работе» → фото выполненной работы →
+                            закрытие
                             заказа → клиент получает уведомление.
                         </li>
-                        
+
                         <li>
-                            
+
                             <span class="bold_text">
                                 Для логистической компании:
                             </span>
                             Водитель заходит в приложение → видит свой маршрут → отмечает пункты прибытия → загружает
                             подпись получателя → диспетчер видит всё в реальном времени.
                         </li>
-                        
+
                         <li>
-                            
+
                             <span class="bold_text">
                                 Для отдела продаж:
                             </span>
                             Менеджер заводит клиента → планирует звонок через 3 дня → система напоминает → после звонка
                             ставит статус «договорились» или «отказ» → руководитель видит воронку.
                         </li>
-                        
+
                         <li>
-                            
+
                             <span class="bold_text">
                                 Для строительной фирмы:
                             </span>

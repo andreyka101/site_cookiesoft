@@ -1,4 +1,28 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.black_block {
+    grid-template-columns: auto !important;
+
+    .h3X {
+        grid-column: 1 span !important;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-column: 1 span !important;
+
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -135,24 +159,25 @@
                     </h3>
                     <ul>
                         <li>
-                            
-                            Каталог строительных материалов: 200 000 товаров с характеристиками (размеры, цвета, материалы,
+
+                            Каталог строительных материалов: 200 000 товаров с характеристиками (размеры, цвета,
+                            материалы,
                             сертификаты)
                         </li>
-                        
+
                         <li>
-                            
+
                             Автозапчасти: 500 000 позиций, поиск по VIN-коду авто, фильтр по производителю, модели, году
                             выпуска
                         </li>
-                        
+
                         <li>
-                            
+
                             Аптека: 100 000 товаров, проверка наличия в региональных аптеках, бронирование, доставка
-                            
+
                         </li>
                         <li>
-                            
+
                             B2B-площадка для оптовых закупок: персональные цены для каждого клиента, отсрочка платежа,
                             загрузка прайсов Excel
                         </li>

@@ -1,4 +1,33 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.black_block {
+    grid-template-columns: auto auto !important;
+
+    .h3X {
+        grid-column: 2 span !important;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -139,22 +168,22 @@
                             Магазин одежды: каталог с фильтрами по размеру и цвету, корзина, бонусы за покупки, push о
                             распродажах
                         </li>
-                        
+
                         <li>
 
                             Салон красоты: запись к мастерам, выбор времени, история визитов, накопительная скидка
                         </li>
-                        
+
                         <li>
 
                             Фитнес-клуб: расписание тренировок, запись на занятия, абонементы, push о новых группах
                         </li>
-                        
+
                         <li>
 
                             Доставка еды: меню с категориями, корзина, оплата картой, статус заказа в реальном времени
                         </li>
-                        
+
                         <li>
 
                             Кофейня: программа лояльности (каждая 10-я кофе бесплатно), push с акцией дня, QR-код для

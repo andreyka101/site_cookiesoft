@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.black_block {
+    grid-template-columns: auto auto 30% !important;
+
+    #n_list3 {
+        grid-row: 2 span;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -63,7 +91,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="div_list">
+                    <div class="div_list" id="n_list3">
                         <h3>
                             3. Дашборды и визуализация
                         </h3>
@@ -180,31 +208,33 @@
                     <ul>
                         <li>
 
-                            Ритейл (сеть магазинов): дашборд с остатками, продажами по каждому магазину, динамикой среднего
+                            Ритейл (сеть магазинов): дашборд с остатками, продажами по каждому магазину, динамикой
+                            среднего
                             чека, прогнозом закупок
                         </li>
-                        
+
                         <li>
 
                             Логистическая компания: мониторинг выполнения заказов, время доставки, загрузка водителей,
                             топливо, опоздания
                         </li>
-                        
+
                         <li>
 
                             Производственный холдинг: загрузка станков, брак, производительность цехов, себестоимость
                             единицы продукции
                         </li>
-                        
+
                         <li>
 
                             Финтех / банк: когортный анализ клиентов, отток, LTV, транзакции в реальном времени,
                             комплаенс-отчеты
                         </li>
-                        
+
                         <li>
 
-                            Маркетинговое агентство (на 100+ клиентов): сводка по всем кампаниям, ROMI, CPA, динамика лидов
+                            Маркетинговое агентство (на 100+ клиентов): сводка по всем кампаниям, ROMI, CPA, динамика
+                            лидов
                             по каждому клиенту
                         </li>
                     </ul>

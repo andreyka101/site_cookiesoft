@@ -1,4 +1,55 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.black_block {
+    grid-template-columns: 26% auto auto !important;
+
+    #n_list1 {
+        grid-row: 2 span;
+    }
+
+}
+
+@media screen and (max-width:1600px) {
+    .black_block {
+        grid-template-columns: 30% auto auto !important;
+    }
+}
+
+@media screen and (max-width:1320px) {
+    .black_block {
+        grid-template-columns: auto auto !important;
+
+        #n_list1 {
+            grid-row: 1 span;
+            grid-column: 2 span;
+        }
+
+        .h3X {
+            grid-column: 2 span !important;
+        }
+
+    }
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -13,7 +64,7 @@
                 предложения, обмениваются документами, подписывают договоры и отслеживают статус заказов. Это замена
                 хаотичной работы через email и Excel на единую прозрачную систему.
             </p>
-            <p>
+            <!-- <p>
                 Кому подходит:
                 Что входит в решение:
 
@@ -135,13 +186,13 @@
                 крупного бизнеса.
 
                 Продолжаем? Назовите следующий пункт из любого списка.
-            </p>
+            </p> -->
             <div class="all_lists">
                 <div class="black_block">
                     <h3 class="h3X">
                         Что входит в решение:
                     </h3>
-                    <div class="div_list">
+                    <div class="div_list" id="n_list1">
                         <h3>
                             Для заказчика (вашей компании):
                         </h3>
@@ -255,6 +306,58 @@
                             <li>
 
                                 Аналитические дашборды по экономии, скорости закупок, надежности поставщиков
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="div_list">
+                        <h3>
+                            Результат для вас:
+                        </h3>
+                        <ul>
+                            <li>
+                                Прозрачность — все заявки в одном месте
+                            </li>
+
+                            <li>
+                                Контроль — утверждённые процедуры тендеров
+                            </li>
+
+                            <li>
+                                Экономия — конкуренция поставщиков снижает цены
+                            </li>
+
+                            <li>
+                                Скорость — автоматизация уведомлений и сравнения
+                            </li>
+
+                            <li>
+                                Безопасность — роли, аудит, шифрование
+                            </li>
+
+                            <li>
+                                Масштабируемость — тысячи поставщиков и сотни тендеров
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="div_list">
+                        <h3>
+                            Преимущества разработки под заказ:
+                        </h3>
+                        <ul>
+                            <li>
+                                Нет комиссий с закупок (в отличие от B2B-Center, Сбербанк-АСТ)
+                            </li>
+
+                            <li>
+                                Процессы адаптируются под ваш регламент
+                            </li>
+
+                            <li>
+                                Интеграция с вашей ERP с первого дня
+                            </li>
+
+                            <li>
+                                Исходный код передаётся полностью — доработки без ограничений
                             </li>
                         </ul>
                     </div>

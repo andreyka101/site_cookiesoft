@@ -1,4 +1,34 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+@media screen and (max-width:1300px) {
+    .black_block {
+        grid-template-columns: auto auto !important;
+
+        .h3X {
+            grid-column: 2 span !important;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+
+        .black_block {
+            grid-template-columns: auto !important;
+            grid-column: 1 span !important;
+
+            .h3X {
+                grid-column: 1 span !important;
+            }
+
+        }
+
+        .div_list {
+            grid-column: 1 span !important;
+        }
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>

@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.div_list {
+    grid-column: 2 span !important;
+}
+
+#n_list1 {
+    grid-column: 1 span !important;
+    grid-row: 2 span;
+}
+
+.all_lists {
+    // grid-template-columns: auto auto auto !important;
+    grid-template-columns: 35% 20% 45% !important;
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+
+    #n_list1 {
+        grid-column: 1 span !important;
+    }
+
+    .div_list {
+        grid-column: 1 span !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -19,7 +47,7 @@
                 данные от первых пользователей.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -108,24 +136,24 @@
 
                             Сервис поиска попутчиков: только карта с поездками, кнопка «связаться», простой профиль
                         </li>
-                        
+
                         <li>
 
                             Доска фриланс-задач: заказчик публикует задание, исполнитель откликается, чат внутри
                         </li>
-                        
+
                         <li>
 
                             Приложение для сбора заказов из чата: клиент оставляет заказ, продавец видит список и меняет
                             статусы
                         </li>
-                        
+
                         <li>
 
                             Калькулятор страховки с отправкой заявки: пользователь вводит параметры, получает цену,
                             оставляет контакты
                         </li>
-                        
+
                         <li>
 
                             Платформа для онлайн-курсов: только видео и тест в конце, без форума и сертификатов
@@ -151,7 +179,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 150 000 ₽
+                <!-- от 150 000 ₽ -->
+                от 80 000 ₽
             </div>
         </div>
     </TransparentBox>

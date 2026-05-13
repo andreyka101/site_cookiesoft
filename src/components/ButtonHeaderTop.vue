@@ -102,6 +102,7 @@ export default {
 
         }
         else {
+            // @ts-ignore
             el.href = this.link + ""
         }
 

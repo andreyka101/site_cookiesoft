@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.div_list {
+    grid-column: 2 span !important;
+}
+
+#n_list1 {
+    grid-column: 1 span !important;
+    grid-row: 2 span;
+}
+
+.all_lists {
+    // grid-template-columns: auto auto auto !important;
+    grid-template-columns: 35% 20% 45% !important;
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+
+    #n_list1 {
+        grid-column: 1 span !important;
+    }
+
+    .div_list {
+        grid-column: 1 span !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -17,7 +45,7 @@
                 онлайн-школы, доставки, службы такси, стартапы с регулярными клиентами.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -99,17 +127,17 @@
                             Интернет-магазин свечей: клиент заходит, видит свои прошлые заказы и их статус (собран /
                             отправлен / доставлен)
                         </li>
-                        
+
                         <li>
 
                             Салон красоты: клиент видит историю визитов, записанные процедуры, мастера
                         </li>
-                        
+
                         <li>
 
                             Онлайн-школа: ученик видит купленные курсы и прогресс
                         </li>
-                        
+
                         <li>
 
                             Сервис доставки еды: клиент видит прошлые заказы и может повторить заказ в один клик
@@ -135,7 +163,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 100 000 ₽
+                <!-- от 100 000 ₽ -->
+                от 50 000 ₽
             </div>
         </div>
     </TransparentBox>

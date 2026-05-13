@@ -1,4 +1,31 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.div_list {
+    grid-column: 3 span !important;
+}
+
+#n_list1 {
+    grid-column: 2 span !important;
+    grid-row: 2 span;
+}
+
+.all_lists {
+    grid-template-columns: auto auto auto auto auto !important;
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+
+    #n_list1 {
+        grid-column: 1 span !important;
+    }
+
+    .div_list {
+        grid-column: 1 span !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -17,7 +44,7 @@
                 локальный бизнес с сезонными акциями, стартапы на этапе сбора первых заказов.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -104,22 +131,22 @@
 
                             Сайт для запуска курса: «Запишись до 20 мая со скидкой 40%»
                         </li>
-                        
+
                         <li>
 
                             Сайт для новой коллекции одежды: «Премьера весна 2026 — первые 50 заказов с подарком»
                         </li>
-                        
+
                         <li>
 
                             Сайт для ресторана: «Новогоднее меню — бронирование столов со скидкой 15%»
                         </li>
-                        
+
                         <li>
 
                             Сайт для SaaS-продукта: «Ранний доступ для первых 100 пользователей — бесплатно на 3 месяца»
                         </li>
-                        
+
                         <li>
 
                             Сайт для локального автосервиса: «Сезонная диагностика — 50% на выезд мастера»
@@ -145,7 +172,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 30 000 ₽
+                <!-- от 20 000 ₽ -->
+                от 10 000 ₽
             </div>
         </div>
     </TransparentBox>

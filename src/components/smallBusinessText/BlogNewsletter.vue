@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.div_list {
+    grid-column: 3 span !important;
+}
+
+#n_list1 {
+    grid-column: 2 span !important;
+    grid-row: 2 span;
+}
+
+.all_lists {
+    // grid-template-columns: auto auto auto !important;
+    grid-template-columns: 20% 20% 20% 20% 20% !important;
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+
+    #n_list1 {
+        grid-column: 1 span !important;
+    }
+
+    .div_list {
+        grid-column: 1 span !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -18,7 +46,7 @@
                 историей.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -129,22 +157,22 @@
 
                             Юрист ведёт блог о налогах для самозанятых — подписчики получают новые разборы
                         </li>
-                        
+
                         <li>
 
                             Фитнес-тренер публикует упражнения и рецепты — рассылка с новыми статьями
                         </li>
-                        
+
                         <li>
 
                             Небольшой интернет-магазин делится обзорами товаров и акциями
                         </li>
-                        
+
                         <li>
 
                             Студия дизайна показывает кейсы и инсайты — подписчики узнают о новых услугах
                         </li>
-                        
+
                         <li>
 
                             Психолог публикует статьи о тревожности и отношениях — подписчики получают их автоматически
@@ -172,7 +200,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 90 000 ₽
+                <!-- от 90 000 ₽ -->
+                от 50 000 ₽
             </div>
         </div>
     </TransparentBox>

@@ -45,5 +45,14 @@ const router = createRouter({
       component: LeaveRequestView,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    // Если пользователь нажал кнопку "Назад" в браузере
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      // Во всех остальных случаях прокручиваем в начало
+      return { top: 0 }
+    }
+  }
 })
 export default router

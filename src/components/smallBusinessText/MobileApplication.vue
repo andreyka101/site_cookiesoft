@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.div_list {
+    grid-column: 2 span !important;
+}
+
+#n_list1 {
+    grid-column: 1 span !important;
+    grid-row: 2 span;
+}
+
+.all_lists {
+    // grid-template-columns: auto auto auto !important;
+    grid-template-columns: 35% 20% 45% !important;
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+
+    #n_list1 {
+        grid-column: 1 span !important;
+    }
+
+    .div_list {
+        grid-column: 1 span !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -18,7 +46,7 @@
                 регулярными клиентами, кафе с программой лояльности, стартапы в сфере услуг, частные школы и курсы.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -114,25 +142,28 @@
                     <ul>
                         <li>
 
-                            Студия красоты: приложение с каталогом услуг, записью к мастерам, лентой с советами по уходу,
+                            Студия красоты: приложение с каталогом услуг, записью к мастерам, лентой с советами по
+                            уходу,
                             напоминанием о следующем визите
                         </li>
-                        
+
                         <li>
 
-                            Магазин цветов: каталог букетов, запись на доставку к дате, лента с идеями оформления, push со
+                            Магазин цветов: каталог букетов, запись на доставку к дате, лента с идеями оформления, push
+                            со
                             скидкой на завтра
                         </li>
-                        
+
                         <li>
 
                             Фитнес-клуб: расписание тренировок, запись на групповые занятия, лента с упражнениями,
                             push-напоминание о тренировке
                         </li>
-                        
+
                         <li>
 
-                            Школа английского: каталог курсов, запись на пробный урок, лента с полезными фразами и новостями
+                            Школа английского: каталог курсов, запись на пробный урок, лента с полезными фразами и
+                            новостями
                             школы
                         </li>
                     </ul>
@@ -156,7 +187,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 180 000 ₽
+                <!-- от 180 000 ₽ -->
+                от 80 000 ₽
             </div>
         </div>
     </TransparentBox>

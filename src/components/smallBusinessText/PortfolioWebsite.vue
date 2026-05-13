@@ -1,4 +1,32 @@
-<style lang="scss"></style>
+<style scoped lang="scss">
+.div_list {
+    grid-column: 2 span !important;
+}
+
+#n_list1 {
+    grid-column: 1 span !important;
+    grid-row: 2 span;
+}
+
+.all_lists {
+    // grid-template-columns: auto auto auto !important;
+    grid-template-columns: 40% 20% 40% !important;
+}
+
+@media screen and (max-width:900px) {
+    .all_lists {
+        grid-template-columns: auto !important;
+    }
+
+    #n_list1 {
+        grid-column: 1 span !important;
+    }
+
+    .div_list {
+        grid-column: 1 span !important;
+    }
+}
+</style>
 <template>
     <TransparentBox>
         <h2>
@@ -19,7 +47,7 @@
                 координаторы, иллюстраторы, 3D-визуализаторы.
             </p>
             <div class="all_lists">
-                <div class="div_list">
+                <div class="div_list" id="n_list1">
                     <h3>
                         Что входит в решение:
                     </h3>
@@ -179,7 +207,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 45 000 ₽
+                <!-- от 45 000 ₽ -->
+                от 15 000 ₽
             </div>
         </div>
     </TransparentBox>
