@@ -1,33 +1,48 @@
-# site_cookiesoft
+# 🌐 My Personal Portfolio Site
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="left">
+  <img src="https://shields.io" alt="Vue.js">
+  <img src="https://shields.io" alt="TypeScript">
+  <img src="https://shields.io🎨-cf649a?style=flat-square&logo=sass&logoColor=white" alt="SCSS">
+  <img src="https://shields.io🚀-646cff?style=flat-square&logo=vite&logoColor=white" alt="Vite">
+</p>
 
-## Recommended IDE Setup
+Исходный код моего личного сайта-портфолио. Проект создан для демонстрации моих навыков в коммерческой frontend-разработке, презентации ключевых кейсов, текущего технологического стека и каналов связи со мной.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Сайт полностью адаптивен, оптимизирован для быстрой загрузки и разработан с соблюдением современных стандартов компонентного подхода.
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 🛠 Технологический стек
 
-## Customize configuration
+- **Основной фреймворк:** Vue 3 (Composition API, `<script setup>`).
+- **Сверхстрогая типизация:** TypeScript.
+- **Стилизация:** SCSS (Sass) с использованием компонентной методологии, переменных и миксинов для адаптивности.
+- **Инструментарий & Сборка:** Vite, ESLint, Prettier, TypeScript Node/App конфигурации.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 📂 Структура репозитория
 
-```sh
-npm install
+```text
+├── .vscode/               # Настройки рабочей среды VS Code
+├── portfolio/             # Дополнительные материалы портфолио
+├── public/                # Статические ресурсы (favicons, глобальные файлы)
+├── src/                   # Исходный код приложения
+│   ├── assets/            # Глобальные стили (SCSS), изображения, шрифты
+│   ├── components/        # Переиспользуемые Vue-компоненты (UI-кит, секции сайта)
+│   ├── App.vue            # Корневой компонент приложения
+│   └── main.ts            # Точка входа в приложение
+├── index.html             # Главный HTML-шаблон
+├── vite.config.ts         # Конфигурация сборщика Vite
+└── tsconfig.json          # Базовая конфигурация TypeScript
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
+## 🚀 Архитектурные особенности
 
-### Type-Check, Compile and Minify for Production
+- **Компонентная структура:** Интерфейс разбит на независимые, легко масштабируемые Vue-компоненты.
+- **Оптимизация производительности:** Быстрая инициализация приложения благодаря легковесному сборщику Vite и отсутствию тяжелых внешних библиотек.
+- **Чистый код:** Строгие правила типизации TypeScript гарантируют стабильность работы интерфейса и минимизируют runtime-ошибки.
 
-```sh
-npm run build
-```
