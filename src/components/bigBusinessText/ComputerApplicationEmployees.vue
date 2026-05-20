@@ -222,7 +222,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 900 000 ₽
+                <!-- от 900 000 ₽ -->
+                от 400 000 ₽
             </div>
         </div>
     </TransparentBox>

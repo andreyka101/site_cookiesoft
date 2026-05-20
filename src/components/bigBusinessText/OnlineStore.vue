@@ -1,4 +1,4 @@
-<style scoped lang="scss">
+  <style scoped lang="scss">
 .black_block {
     grid-template-columns: auto !important;
 
@@ -204,7 +204,8 @@
                 </div> -->
             </div>
             <div class="price_center">
-                от 1 000 000 ₽
+                <!-- от 1 000 000 ₽ -->
+                от 500 000 ₽
             </div>
         </div>
     </TransparentBox>
