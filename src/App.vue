@@ -128,6 +128,8 @@
     </TransparentBox>
     <div style="display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;">
       <div class="portfolio_none" style="display: flex;">
+        <ButtonHeaderBack>
+        </ButtonHeaderBack>
         <ButtonHeaderTop id="but_id_1" n_id="but_id_1" tag="top" link_photo="/Vector top.svg">
         </ButtonHeaderTop>
         <ButtonHeader id="but_id_2" n_id="but_id_2" tag="telegram" link_photo="/telegram.svg">
@@ -297,6 +299,7 @@ import { RouterLink, RouterView, useRoute } from 'vue-router'
 import TransparentBox from "./components/TransparentBox.vue";
 import ButtonHeader from "./components/ButtonHeader.vue";
 import ButtonHeaderTop from "./components/ButtonHeaderTop.vue";
+import ButtonHeaderBack from "./components/ButtonHeaderBack.vue";
 import router from './router';
 const route = useRoute();
 
