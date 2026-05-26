@@ -4,7 +4,6 @@ import PortfolioView from '../views/PortfolioView.vue'
 import SmallBusinessView from '../views/SmallBusinessView.vue'
 import MediumBusinessView from '../views/MediumBusinessView.vue'
 import BigBusinessView from '../views/BigBusinessView.vue'
-import LeaveRequestView from '../views/LeaveRequestView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,11 +37,6 @@ const router = createRouter({
       path: '/big-business',
       name: 'big-business',
       component: BigBusinessView,
-    },
-    {
-      path: '/leave-request',
-      name: 'leave-request',
-      component: LeaveRequestView,
     },
   ],
   scrollBehavior(to, from, savedPosition) {

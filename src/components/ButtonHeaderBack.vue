@@ -23,7 +23,7 @@
 
 @media(hover:hover) {
 
-    .button_header:hover {
+    .button_back:hover {
         transition: 0.1s;
         border: 3px #404040 solid;
     }
