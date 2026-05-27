@@ -13,6 +13,7 @@
     font-weight: 500;
   }
 
+
   header {
     background-color: var(--plshldColor);
   }
@@ -225,7 +226,7 @@
     </span>
   </button>
 
-<LeaveRequestBlock v-if="bool_LeaveRequest" v-model:title="click_Back_LeaveRequest" />
+<LeaveRequestBlock v-if="bool_LeaveRequest" v-model:bool_LeaveRequest="bool_LeaveRequest" />
 
 
   <footer>
@@ -304,9 +305,8 @@ onMounted(() => {
 let bool_LeaveRequest = ref(false)
 const click_LeaveRequest = () => {
   bool_LeaveRequest.value = true
-}
-const click_Back_LeaveRequest = () => {
-  bool_LeaveRequest.value = false
+  const body = document.querySelector("body") as HTMLBodyElement
+  body.classList.add("no-scroll")
 }
 
 </script>

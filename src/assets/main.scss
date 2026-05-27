@@ -3,6 +3,14 @@
     margin: auto;
 }
 
+body {
+    scrollbar-gutter: stable;
+    background-color: black;
+}
+.body_stop_scroll {
+    overflow: clip;
+}
+
 // /* ==============================
 //    БАЗОВЫЕ СТИЛИ И ТИПОГРАФИКА
 //    ============================== */
