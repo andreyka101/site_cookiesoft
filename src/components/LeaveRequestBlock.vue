@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(5px);
 }
 
 .transparent_box {
@@ -18,43 +19,69 @@
     display: flex;
     flex-direction: column;
 
-    input {
-        color: #ffffffcc;
-        border: #ffffff 0px solid;
-        border-radius: 7px;
-        padding: 7px;
-        font-size: 15px;
-        background-color: #40404052;
-        margin: 10px;
-    }
-
-    button {
-        display: inline-block;
-        border-radius: 8px;
-        padding: 5px;
-        margin: 2px;
-        border: #000 0px solid;
-        // transition: 2s;
-        background-image: repeating-linear-gradient(-45deg, #ceffff, #ceffff 0.5rem, #ffc9c9 0.5rem, #ffc9c9 1rem);
-
-        span {
-            display: inline-block;
-            padding: 8px 10px;
-            color: #FFFFFF;
+    .grid_box {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        input {
+            color: #ffffffcc;
+            border: #ffffff 0px solid;
             border-radius: 8px;
-            background-color: #404040;
-            transition: 0.6s;
-            font-weight: 900;
+            padding: 7px;
+            font-size: 15px;
+            background-color: #40404052;
+            margin: 10px;
         }
+
+        .call_me_but {
+            display: inline-block;
+            border-radius: 8px;
+            padding: 5px;
+            margin: 2px;
+            border: #000 0px solid;
+            // transition: 2s;
+            background-image: repeating-linear-gradient(-45deg, #ceffff, #ceffff 0.5rem, #ffc9c9 0.5rem, #ffc9c9 1rem);
+
+            span {
+                display: inline-block;
+                padding: 8px 10px;
+                color: #FFFFFF;
+                border-radius: 8px;
+                background-color: #404040;
+                transition: 0.6s;
+                font-weight: 900;
+            }
+        }
+
+        .call_me_but:hover {
+            cursor: pointer;
+
+            span {
+                color: #404040;
+                background-color: #FFC4C4;
+
+            }
+        }
+
+        .back_but{
+    //             transition: 0.7s;
+    // border: 3px #40404000 solid;
+
+    // background-color: #ffffff52;
+    border-radius: 8px;
+    // margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 4px;
+
+    grid-row: span 3;
+
+    div {
+        background: url('.././public/levaya_strelka_vuvdr4ly3rex.svg') center/cover;
+        width: 80px;
+        height: 80px;
     }
-
-    button:hover {
-        cursor: pointer;
-
-        span {
-            color: #404040;
-            background-color: #FFC4C4;
-
         }
     }
 }
@@ -69,13 +96,18 @@
             <p>
                 Задайте вопрос нашему ведущему разработчику. Консультация бесплатна и ни к чему не обязывает.
             </p>
-            <input type="text">
-            <input type="tel">
-            <button class="active_button">
-                <span>
-                    позвоните мне
-                </span>
-            </button>
+            <div class="grid_box">
+                <button class="back_but">
+                    <div></div>
+                </button>
+                <input type="text">
+                <input type="tel">
+                <button class="active_button call_me_but">
+                    <span>
+                        позвоните мне
+                    </span>
+                </button>
+            </div>
         </TransparentBox>
     </div>
 </template>
