@@ -13,7 +13,7 @@
     padding: 4px;
 
     div {
-        background: url('.././public/Vector top.svg') center/cover;
+        background: url('@p/Vector top.svg') center/cover;
         width: 30px;
         height: 30px;
         rotate: -90deg;
