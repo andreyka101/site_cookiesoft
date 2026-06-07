@@ -18,13 +18,6 @@
     background-color: var(--plshldColor);
   }
 
-  footer {
-    margin-top: 100px;
-    height: 400px;
-    background-color: #404040;
-    border-radius: 15px;
-  }
-
   @media screen and (max-width: 670px) {
     .blockCookie {
       display: none;
@@ -226,17 +219,10 @@
     </span>
   </button>
 
-<LeaveRequestBlock v-if="bool_LeaveRequest" v-model:bool_LeaveRequest="bool_LeaveRequest" />
+  <LeaveRequestBlock v-if="bool_LeaveRequest" v-model:bool_LeaveRequest="bool_LeaveRequest" />
 
+  <FooterBox />
 
-  <footer>
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-  </footer>
 </template>
 
 
@@ -247,6 +233,7 @@ import ButtonHeader from "./components/ButtonHeader.vue";
 import ButtonHeaderTop from "./components/ButtonHeaderTop.vue";
 import ButtonHeaderBack from "./components/ButtonHeaderBack.vue";
 import LeaveRequestBlock from "./components/LeaveRequestBlock.vue";
+import FooterBox from "./components/FooterBox.vue";
 import router from './router';
 const route = useRoute();
 
