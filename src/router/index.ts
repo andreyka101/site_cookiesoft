@@ -33,11 +33,11 @@ const router = createRouter({
       name: 'big-business',
       component: BigBusinessView,
     },
-    {
-      path: '/big-business',
-      name: 'big-business',
-      component: BigBusinessView,
-    },
+    // {
+    //   path: '/big-business',
+    //   name: 'big-business',
+    //   component: BigBusinessView,
+    // },
   ],
   scrollBehavior(to, from, savedPosition) {
     // Если пользователь нажал кнопку "Назад" в браузере
