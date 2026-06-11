@@ -6,8 +6,8 @@ footer {
     border-radius: 15px;
     display: flex;
     justify-content: center;
-    padding-top: 60px;
-    padding-bottom: 140px;
+    padding-top: 70px;
+    padding-bottom: 130px;
 
     .box_width {
         width: 70%;
@@ -35,25 +35,64 @@ footer {
                     margin-bottom: 3px;
                 }
 
-                a:hover {
-                    color: #d1d1d1;
+                @media (hover: hover) {
+                    a:hover {
+                        color: #d1d1d1;
+                    }
                 }
             }
         }
 
+        @media (min-width: 1024px) and (max-width: 1599px) {
+            span {
+                font-size: 24px;
+            }
+
+            ul li a {
+                font-size: 19px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            span {
+                font-size: 21px;
+            }
+
+            ul li a {
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            span {
+                font-size: 18px;
+            }
+
+            ul li a {
+                font-size: 16px;
+            }
+        }
     }
 
-    ul:hover span {
-        color: #e88c8c;
+    @media (hover: hover) {
+
+        .block_span_list:hover span {
+            // color: #e88c8c;
+            text-shadow: #fff 0px 0 16px;
+        }
     }
+}
 
-
+@media (max-width: 630px) {
+    footer .box_width {
+        width: 100%;
+    }
 }
 </style>
 <template>
     <footer>
         <div class="box_width">
-            <div>
+            <div class="block_span_list">
                 <span class="h3_list">Карта сайта</span>
                 <nav>
                     <ul>
@@ -75,7 +114,7 @@ footer {
                     </ul>
                 </nav>
             </div>
-            <div>
+            <div class="block_span_list">
                 <span class="h3_list">Контакты</span>
                 <ul>
                     <li>

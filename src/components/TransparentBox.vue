@@ -21,7 +21,11 @@
     width: var(--wid);
     border: 0px #ff1515 solid;
     transition: 0.5s;
+    @media (max-width: 700px){
+        margin: 10px 10px;
+    }
 }
+
 
 .transparent_black {
     background-color: #404040;
