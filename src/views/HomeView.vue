@@ -570,6 +570,7 @@ h3 {
   </TransparentBox>
 
 
+  <TableServices />
 
   <!-- малый бизнес -->
   <div class="small_business_box_non">
@@ -659,7 +660,6 @@ h3 {
       </div>
     </TransparentBox>
   </div>
-
 
 
   <!-- средний бизнес -->
@@ -923,6 +923,7 @@ import SmallBusinessButton from "../components/SmallBusinessButton.vue";
 import MediumBusinessButton from "../components/MediumBusinessButton.vue";
 import BigBusinessButton from "../components/BigBusinessButton.vue";
 import PortfolioButton from "../components/PortfolioButton.vue";
+import TableServices from '../components/TableServices.vue'
 
 
 
